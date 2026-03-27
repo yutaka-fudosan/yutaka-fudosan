@@ -5,11 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社ユタカ不動産 | 刈谷市の不動産・月極駐車場</title>
   <meta name="description" content="刈谷市の不動産なら株式会社ユタカ不動産。昭和51年創業、地域密着で不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談に対応しています。" />
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -36,7 +41,6 @@
       margin: 0 auto;
     }
 
-    /* ヘッダー */
     header {
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
@@ -79,9 +83,9 @@
       color: #1f3c88;
     }
 
-    /* ヒーロー */
     .hero {
-      background: linear-gradient(rgba(20, 35, 70, 0.55), rgba(20, 35, 70, 0.55)),
+      background:
+        linear-gradient(rgba(20, 35, 70, 0.58), rgba(20, 35, 70, 0.58)),
         url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
       color: #fff;
       text-align: center;
@@ -114,7 +118,8 @@
       color: rgba(255, 255, 255, 0.92);
     }
 
-    .hero-buttons {
+    .hero-buttons,
+    .contact-buttons {
       display: flex;
       justify-content: center;
       gap: 14px;
@@ -128,16 +133,17 @@
       font-size: 14px;
       font-weight: 700;
       transition: 0.2s ease;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     }
 
     .btn-primary {
       background: #ffffff;
       color: #1f3c88;
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .btn-secondary {
@@ -150,7 +156,21 @@
       background: rgba(255, 255, 255, 0.16);
     }
 
-    /* セクション共通 */
+    .btn-tel {
+      background: #1f3c88;
+      color: #fff;
+    }
+
+    .btn-line {
+      background: #06c755;
+      color: #fff;
+    }
+
+    .btn-insta {
+      background: linear-gradient(45deg, #f09433, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+    }
+
     section {
       padding: 70px 0;
     }
@@ -171,7 +191,6 @@
       color: #666;
     }
 
-    /* 会社紹介 */
     .about {
       background: #fff;
     }
@@ -202,7 +221,6 @@
       object-fit: cover;
     }
 
-    /* サービス */
     .services {
       background: #f7f8fa;
     }
@@ -236,7 +254,6 @@
       color: #555;
     }
 
-    /* 特徴 */
     .features {
       background: #fff;
     }
@@ -266,7 +283,10 @@
       color: #555;
     }
 
-    /* CTA */
+    .contact-section {
+      padding-top: 0;
+    }
+
     .cta {
       background: linear-gradient(135deg, #1f3c88, #3157b7);
       color: #fff;
@@ -287,7 +307,41 @@
       color: rgba(255, 255, 255, 0.9);
     }
 
-    /* 会社概要 */
+    .qr-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .qr-card {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 18px;
+      padding: 22px;
+      text-align: center;
+    }
+
+    .qr-card h3 {
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .qr-card img {
+      width: 210px;
+      max-width: 100%;
+      margin: 0 auto 12px;
+      border-radius: 12px;
+      background: #fff;
+      padding: 8px;
+    }
+
+    .qr-card p {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.92);
+      margin-bottom: 0;
+    }
+
     .company {
       background: #fff;
     }
@@ -307,6 +361,7 @@
       border-bottom: 1px solid #edf0f4;
       text-align: left;
       font-size: 14px;
+      vertical-align: top;
     }
 
     .company-table th {
@@ -316,7 +371,41 @@
       font-weight: 700;
     }
 
-    /* フッター */
+    .company-table ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .access {
+      background: #f7f8fa;
+    }
+
+    .access-box {
+      background: #fff;
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .access-info {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #444;
+      font-size: 15px;
+    }
+
+    .map-frame {
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .map-frame iframe {
+      width: 100%;
+      height: 380px;
+      border: 0;
+      display: block;
+    }
+
     footer {
       background: #1f2937;
       color: #e5e7eb;
@@ -325,11 +414,16 @@
       font-size: 13px;
     }
 
-    /* レスポンシブ */
+    footer a {
+      color: #fff;
+      margin: 0 8px;
+    }
+
     @media (max-width: 900px) {
       .about-box,
       .service-grid,
-      .feature-grid {
+      .feature-grid,
+      .qr-grid {
         grid-template-columns: 1fr;
       }
 
@@ -373,6 +467,25 @@
       .section-title h2 {
         font-size: 24px;
       }
+
+      .company-table th,
+      .company-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .company-table th {
+        border-bottom: none;
+        padding-bottom: 6px;
+      }
+
+      .company-table td {
+        padding-top: 0;
+      }
+
+      .map-frame iframe {
+        height: 320px;
+      }
     }
   </style>
 </head>
@@ -387,6 +500,7 @@
           <li><a href="#services">事業内容</a></li>
           <li><a href="#features">当社の強み</a></li>
           <li><a href="#company">会社概要</a></li>
+          <li><a href="#access">アクセス</a></li>
           <li><a href="#contact">お問い合わせ</a></li>
         </ul>
       </nav>
@@ -401,9 +515,12 @@
         不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談まで、
         地域に根ざしたきめ細やかな対応でサポートいたします。
       </p>
+
       <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">お問い合わせはこちら</a>
-        <a href="#services" class="btn btn-secondary">事業内容を見る</a>
+        <a href="tel:0566231758" class="btn btn-tel">お電話はこちら</a>
+        <a href="https://lin.ee/W2HbWIG" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで問い合わせ</a>
+        <a href="https://www.instagram.com/yutaka.kariya.official_/" class="btn btn-insta" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせ</a>
       </div>
     </div>
   </section>
@@ -431,6 +548,7 @@
             これからも地域の皆さまのお役に立てるよう努めてまいります。
           </p>
         </div>
+
         <div class="about-image">
           <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="不動産イメージ">
         </div>
@@ -472,8 +590,8 @@
         </div>
 
         <div class="service-card">
-          <h3>土地・住まいのご相談</h3>
-          <p>購入・売却・活用方法など、不動産に関するお悩みを幅広くご相談いただけます。</p>
+          <h3>住宅リフォーム</h3>
+          <p>住まいの修繕やリフォームについても、お気軽にご相談いただけます。</p>
         </div>
       </div>
     </div>
@@ -505,14 +623,34 @@
     </div>
   </section>
 
-  <section class="container" id="contact">
+  <section class="container contact-section" id="contact">
     <div class="cta">
       <h2>不動産のこと、お気軽にご相談ください</h2>
       <p>
         刈谷市周辺の不動産売買・賃貸・管理・月極駐車場・売却相談まで、
         地域密着の株式会社ユタカ不動産が丁寧に対応いたします。
       </p>
-      <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせる</a>
+
+      <div class="contact-buttons">
+        <a href="tel:0566231758" class="btn btn-tel">お電話はこちら</a>
+        <a href="https://lin.ee/W2HbWIG" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで問い合わせ</a>
+        <a href="https://www.instagram.com/yutaka.kariya.official_/" class="btn btn-insta" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせ</a>
+      </div>
+
+      <div class="qr-grid">
+        <div class="qr-card">
+          <h3>LINEはこちら</h3>
+          <img src="line-qr.jpg" alt="LINE QRコード">
+          <p>スマホの方はボタンから、パソコンの方はQRからご利用いただけます。</p>
+        </div>
+
+        <div class="qr-card">
+          <h3>Instagramはこちら</h3>
+          <img src="insta-qr.jpg" alt="Instagram QRコード">
+          <p>@yutaka.kariya.official_</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -530,29 +668,87 @@
         </tr>
         <tr>
           <th>所在地</th>
-          <td>愛知県刈谷市</td>
+          <td>愛知県刈谷市新栄町7丁目61番地</td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td><a href="tel:0566231758">0566-23-1758</a></td>
+        </tr>
+        <tr>
+          <th>FAX番号</th>
+          <td>0566-24-7621</td>
+        </tr>
+        <tr>
+          <th>代表者</th>
+          <td>酒井 晶久</td>
+        </tr>
+        <tr>
+          <th>免許番号</th>
+          <td>愛知県知事（3）第22978号</td>
+        </tr>
+        <tr>
+          <th>営業時間</th>
+          <td>10:00〜19:00</td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td>日曜日・年末年始</td>
         </tr>
         <tr>
           <th>事業内容</th>
-          <td>不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談</td>
-        </tr>
-        <tr>
-          <th>創業</th>
-          <td>昭和51年</td>
+          <td>
+            <ul>
+              <li>不動産の管理・運営・メンテナンス</li>
+              <li>不動産賃貸・売買の仲介</li>
+              <li>住宅リフォーム</li>
+            </ul>
+          </td>
         </tr>
         <tr>
           <th>メール</th>
-          <td>office@yutaka-fudosan.com</td>
+          <td><a href="mailto:office@yutaka-fudosan.com">office@yutaka-fudosan.com</a></td>
         </tr>
       </table>
     </div>
   </section>
 
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-title">
+        <h2>アクセス</h2>
+        <p>ご来店の際はお気軽にお立ち寄りください。</p>
+      </div>
+
+      <div class="access-box">
+        <div class="access-info">
+          <p>【住所】愛知県刈谷市新栄町7丁目61番地</p>
+          <p>【営業時間】10:00〜19:00</p>
+          <p>【定休日】日曜日・年末年始</p>
+        </div>
+
+        <div class="map-frame">
+          <iframe
+            src="https://maps.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E6%96%B0%E6%A0%84%E7%94%BA7%E4%B8%81%E7%9B%AE61%E7%95%AA%E5%9C%B0&z=16&output=embed"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
     <div class="container">
+      <p>
+        <a href="tel:0566231758">電話</a> /
+        <a href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE</a> /
+        <a href="https://www.instagram.com/yutaka.kariya.official_/" target="_blank" rel="noopener noreferrer">Instagram</a> /
+        <a href="mailto:office@yutaka-fudosan.com">メール</a>
+      </p>
       <p>© 株式会社ユタカ不動産 All Rights Reserved.</p>
     </div>
   </footer>
 
 </body>
-</html> 
+</html>
