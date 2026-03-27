@@ -6,22 +6,556 @@
   <title>株式会社ユタカ不動産 | 刈谷市の不動産・月極駐車場</title>
   <meta name="description" content="刈谷市の不動産なら株式会社ユタカ不動産。昭和51年創業、地域密着で不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談に対応しています。" />
   <style>
-    /* 全体の文字サイズ */
-body {
-  font-size: 16px;
-  line-height: 1.8;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-/* メインタイトル（デカいやつ） */
-.hero h1 {
-  font-size: 36px; /* ←ここで調整 */
-  text-align: center;
-}
+    body {
+      font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+      background: #f7f8fa;
+    }
 
-/* サブタイトル */
-.hero p {
-  font-size: 16px;
-  text-align: center;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1f3c88;
+      white-space: nowrap;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a {
+      font-size: 14px;
+      color: #444;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    nav a:hover {
+      color: #1f3c88;
+    }
+
+    /* ヒーロー */
+    .hero {
+      background: linear-gradient(rgba(20, 35, 70, 0.55), rgba(20, 35, 70, 0.55)),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 110px 20px 90px;
+    }
+
+    .hero .sub-copy {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 18px;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      line-height: 1.4;
+      margin-bottom: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .hero p {
+      font-size: 15px;
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: rgba(255, 255, 255, 0.92);
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .btn-primary {
+      background: #ffffff;
+      color: #1f3c88;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      color: #fff;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.16);
+    }
+
+    /* セクション共通 */
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      color: #1f3c88;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    /* 会社紹介 */
+    .about {
+      background: #fff;
+    }
+
+    .about-box {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .about-text h3 {
+      font-size: 26px;
+      margin-bottom: 18px;
+      color: #222;
+    }
+
+    .about-text p {
+      margin-bottom: 14px;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .about-image img {
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* サービス */
+    .services {
+      background: #f7f8fa;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 18px;
+      padding: 28px 22px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      transition: 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      color: #1f3c88;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* 特徴 */
+    .features {
+      background: #fff;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-box {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 24px 20px;
+      text-align: center;
+    }
+
+    .feature-box h3 {
+      font-size: 18px;
+      color: #1f3c88;
+      margin-bottom: 10px;
+    }
+
+    .feature-box p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, #1f3c88, #3157b7);
+      color: #fff;
+      text-align: center;
+      border-radius: 24px;
+      padding: 48px 24px;
+    }
+
+    .cta h2 {
+      font-size: 30px;
+      margin-bottom: 14px;
+    }
+
+    .cta p {
+      font-size: 15px;
+      max-width: 700px;
+      margin: 0 auto 24px;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* 会社概要 */
+    .company {
+      background: #fff;
+    }
+
+    .company-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    .company-table th,
+    .company-table td {
+      padding: 16px 18px;
+      border-bottom: 1px solid #edf0f4;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    .company-table th {
+      width: 180px;
+      background: #f8fafc;
+      color: #1f3c88;
+      font-weight: 700;
+    }
+
+    /* フッター */
+    footer {
+      background: #1f2937;
+      color: #e5e7eb;
+      padding: 28px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 900px) {
+      .about-box,
+      .service-grid,
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 30px;
+      }
+
+      .section-title h2,
+      .cta h2 {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        gap: 14px;
+        justify-content: flex-start;
+      }
+
+      .hero {
+        padding: 85px 16px 70px;
+      }
+
+      .hero h1 {
+        font-size: 26px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .section-title h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <div class="logo">株式会社ユタカ不動産</div>
+      <nav>
+        <ul>
+          <li><a href="#about">会社案内</a></li>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#features">当社の強み</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="sub-copy">昭和51年創業・地域密着</div>
+      <h1>刈谷市の不動産なら<br>株式会社ユタカ不動産</h1>
+      <p>
+        不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談まで、
+        地域に根ざしたきめ細やかな対応でサポートいたします。
+      </p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">お問い合わせはこちら</a>
+        <a href="#services" class="btn btn-secondary">事業内容を見る</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-title">
+        <h2>地域とともに歩む不動産会社</h2>
+        <p>長年の実績と地域密着の強みで、お客様の不動産のお悩みに寄り添います。</p>
+      </div>
+
+      <div class="about-box">
+        <div class="about-text">
+          <h3>刈谷市を中心に、安心できる不動産サービスを。</h3>
+          <p>
+            株式会社ユタカ不動産は、昭和51年の創業以来、地域に根差した不動産会社として、
+            住まい・土地・駐車場に関するさまざまなご相談に対応してまいりました。
+          </p>
+          <p>
+            不動産売買や賃貸仲介はもちろん、不動産管理、月極駐車場のご案内、
+            不動産売却のご相談まで、地元ならではの情報力と丁寧な対応でサポートいたします。
+          </p>
+          <p>
+            「相談してよかった」と感じていただける身近な不動産会社を目指し、
+            これからも地域の皆さまのお役に立てるよう努めてまいります。
+          </p>
+        </div>
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=80" alt="不動産イメージ">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-title">
+        <h2>事業内容</h2>
+        <p>住まい・土地・駐車場まで、幅広い不動産ニーズに対応しています。</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>不動産売買仲介</h3>
+          <p>土地・戸建て・マンションなどの売買について、地域事情を踏まえて丁寧にご提案します。</p>
+        </div>
+
+        <div class="service-card">
+          <h3>賃貸仲介</h3>
+          <p>お客様のご希望に合わせて、住まい探しを分かりやすくサポートいたします。</p>
+        </div>
+
+        <div class="service-card">
+          <h3>不動産管理</h3>
+          <p>賃貸物件や駐車場の管理について、オーナー様の負担軽減と安定運用を支援します。</p>
+        </div>
+
+        <div class="service-card">
+          <h3>月極駐車場のご案内</h3>
+          <p>刈谷市周辺の月極駐車場情報をご案内し、空き状況や条件確認もスムーズに対応します。</p>
+        </div>
+
+        <div class="service-card">
+          <h3>不動産売却相談</h3>
+          <p>相続・住み替え・資産整理など、事情に応じた売却の進め方をご提案いたします。</p>
+        </div>
+
+        <div class="service-card">
+          <h3>土地・住まいのご相談</h3>
+          <p>購入・売却・活用方法など、不動産に関するお悩みを幅広くご相談いただけます。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-title">
+        <h2>当社の強み</h2>
+        <p>地域密着だからこそできる、きめ細かな対応があります。</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-box">
+          <h3>地域密着</h3>
+          <p>刈谷市周辺の不動産情報を熟知し、地域に合ったご提案が可能です。</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>長年の実績</h3>
+          <p>昭和51年創業の経験を活かし、多様な不動産のご相談に対応しています。</p>
+        </div>
+
+        <div class="feature-box">
+          <h3>丁寧な対応</h3>
+          <p>初めての方にも分かりやすく、安心してご相談いただける対応を心がけています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="contact">
+    <div class="cta">
+      <h2>不動産のこと、お気軽にご相談ください</h2>
+      <p>
+        刈谷市周辺の不動産売買・賃貸・管理・月極駐車場・売却相談まで、
+        地域密着の株式会社ユタカ不動産が丁寧に対応いたします。
+      </p>
+      <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせる</a>
+    </div>
+  </section>
+
+  <section class="company" id="company">
+    <div class="container">
+      <div class="section-title">
+        <h2>会社概要</h2>
+        <p>株式会社ユタカ不動産の基本情報です。</p>
+      </div>
+
+      <table class="company-table">
+        <tr>
+          <th>会社名</th>
+          <td>株式会社ユタカ不動産</td>
+        </tr>
+        <tr>
+          <th>所在地</th>
+          <td>愛知県刈谷市</td>
+        </tr>
+        <tr>
+          <th>事業内容</th>
+          <td>不動産売買・賃貸仲介・不動産管理・月極駐車場のご案内・不動産売却相談</td>
+        </tr>
+        <tr>
+          <th>創業</th>
+          <td>昭和51年</td>
+        </tr>
+        <tr>
+          <th>メール</th>
+          <td>office@yutaka-fudosan.com</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 株式会社ユタカ不動産 All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>  text-align: center;
 }
 
 /* 見出し */
