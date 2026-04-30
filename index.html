@@ -9,8 +9,8 @@
 <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
 <link rel="apple-touch-icon" href="/favicon.png">
   
-<title>刈谷市の不動産売買・賃貸管理・管理委託なら株式会社ユタカ不動産</title>
-<meta name="description" content="刈谷市で不動産売買・賃貸管理・管理委託のご相談なら株式会社ユタカ不動産。昭和51年創業、地域密着で売却相談、賃貸物件の管理、オーナー様の管理委託を丁寧にサポートします。" />
+<title>刈谷市の不動産売買・管理・賃貸なら株式会社ユタカ不動産</title>
+<meta name="description" content="刈谷市で不動産売買・管理・賃貸のご相談なら株式会社ユタカ不動産。昭和51年創業、地域密着で売却相談、賃貸物件の管理、オーナー様の管理委託を丁寧にサポートします。" />
 
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
@@ -254,28 +254,39 @@
       gap: 24px;
     }
 
-    .service-card {
-      background: #fff;
-      border-radius: 18px;
-      padding: 28px 22px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-      transition: 0.2s ease;
-    }
+.service-card {
+  background: #fff;
+  border: 1px solid #e6e0d6;
+  padding: 32px 28px;
+  border-radius: 4px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
+  transition: all 0.25s ease;
+}
 
-    .service-card:hover {
-      transform: translateY(-4px);
-    }
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
 
-    .service-card h3 {
-      font-size: 20px;
-      color: #1f3c88;
-      margin-bottom: 12px;
-    }
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #1a1a1a;
+}
 
     .service-card p {
       font-size: 14px;
       color: #555;
     }
+
+    .service-label {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: #9b7b3f;
+  font-weight: 600;
+}
 
     .features {
       background: #fff;
@@ -533,14 +544,14 @@
 <section class="hero">
   <div class="container">
     <h1>
-      刈谷市の不動産売買・賃貸・管理なら<br>
+      刈谷市の不動産売買・管理・賃貸なら<br>
       株式会社ユタカ不動産
     </h1>
     <p class="sub-copy">
       昭和51年創業・地域密着で安心の不動産サービス
     </p>
     <p>
-      不動産売買、賃貸管理、管理委託、不動産売却相談まで、
+      不動産売買、管理、賃貸、不動産売却相談まで、
       地域密着の不動産会社として丁寧に対応いたします。
       オーナー様の資産活用や管理のご相談もお気軽にお問い合わせください。
     </p>
@@ -592,47 +603,43 @@
       <p>住まい・土地・駐車場まで、幅広い不動産ニーズに対応しています。</p>
     </div>
 
-    <div class="service-grid">
+ <div class="service-grid">
 
-      <div class="service-card">
-        <div class="service-icon">🏠</div>
-        <h3>不動産売買仲介</h3>
-        <p>土地・戸建て・マンションなどの売買について、地域事情を踏まえて丁寧にご提案します。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🏢</div>
-        <h3>賃貸仲介</h3>
-        <p>お客様のご希望に合わせて、住まい探しを分かりやすくサポートいたします。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🛠</div>
-        <h3>不動産管理</h3>
-        <p>賃貸物件や駐車場の管理について、オーナー様の負担軽減と安定運用を支援します。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🚗</div>
-        <h3>月極駐車場のご案内</h3>
-        <p>刈谷市周辺の月極駐車場情報をご案内し、空き状況や条件確認もスムーズに対応します。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <h3>不動産売却相談</h3>
-        <p>相続・住み替え・資産整理など、事情に応じた売却の進め方をご提案いたします。</p>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">🔧</div>
-        <h3>住宅リフォーム</h3>
-        <p>住まいの修繕やリフォームについても、お気軽にご相談いただけます。</p>
-      </div>
-
-    </div>
+  <div class="service-card">
+    <span class="service-label">SERVICE 01</span>
+    <h3>不動産売買仲介</h3>
+    <p>土地・戸建て・マンションなど、地域事情を踏まえた売買のご提案をいたします。</p>
   </div>
-</section>
+
+  <div class="service-card">
+    <span class="service-label">SERVICE 02</span>
+    <h3>賃貸仲介</h3>
+    <p>住まい探しから契約まで、お客様のご希望に合わせて丁寧にサポートいたします。</p>
+  </div>
+
+  <div class="service-card">
+    <span class="service-label">SERVICE 03</span>
+    <h3>不動産管理</h3>
+    <p>賃貸物件・駐車場の管理を通じて、オーナー様の安定運用を支えます。</p>
+  </div>
+
+  <div class="service-card">
+    <span class="service-label">SERVICE 04</span>
+    <h3>月極駐車場</h3>
+    <p>刈谷市周辺の月極駐車場について、空き状況や条件確認もスムーズに対応します。</p>
+  </div>
+
+  <div class="service-card">
+    <span class="service-label">SERVICE 05</span>
+    <h3>不動産売却相談</h3>
+    <p>相続・住み替え・資産整理など、ご事情に応じた売却方法をご提案いたします。</p>
+  </div>
+
+  <div class="service-card">
+    <span class="service-label">SERVICE 06</span>
+    <h3>住宅リフォーム</h3>
+    <p>住まいの修繕・改修についても、内容に応じてご相談いただけます。</p>
+  </div>
 
   <section class="features" id="features">
     <div class="container">
