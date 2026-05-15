@@ -1,109 +1,626 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>刈谷市の不動産管理・管理委託｜株式会社ユタカ不動産</title>
+<meta name="description" content="刈谷市で不動産管理・管理委託のご相談なら株式会社ユタカ不動産。賃貸物件・月極駐車場管理、入居者対応、賃料管理、空室募集などを地域密着でサポートします。">
+
+<link rel="canonical" href="https://yutaka-fudosan.com/kanri.html">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=Noto+Serif+JP:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 
-/* =========================
-   list
-========================= */
+body{
+  font-family:"Noto Sans JP",sans-serif;
+  color:#12366f;
+  line-height:1.9;
+  background:#f8f6f2;
+}
 
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:92%;max-width:1180px;margin:0 auto}
+
+/* header */
+header{
+  background:#fff;
+  border-bottom:1px solid #eee7dc;
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.header-inner{
+  width:92%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:16px 0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.logo img{
+  width:68px;
+  height:68px;
+}
+
+.logo-title{
+  font-family:"Zen Maru Gothic",sans-serif;
+  font-size:30px;
+  font-weight:700;
+  color:#12366f;
+}
+
+.logo-sub{
+  font-size:12px;
+  color:#444;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:30px;
+}
+
+nav a{
+  font-size:14px;
+  font-weight:700;
+  color:#222;
+}
+
+nav a:hover{color:#b38b43}
+
+/* hero */
+.kanri-hero{
+  position:relative;
+  color:#fff;
+  background:url("hero-kanri.jpg") center center / cover no-repeat;
+}
+
+.kanri-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    90deg,
+    rgba(5,28,65,.92) 0%,
+    rgba(5,28,65,.76) 44%,
+    rgba(5,28,65,.28) 100%
+  );
+}
+
+.kanri-inner{
+  position:relative;
+  z-index:2;
+  width:92%;
+  max-width:1180px;
+  margin:0 auto;
+  padding:120px 0 70px;
+}
+
+.kanri-top{
+  font-family:"Noto Serif JP",serif;
+  font-size:42px;
+  letter-spacing:.08em;
+}
+
+.kanri-inner h1{
+  font-family:"Noto Serif JP",serif;
+  font-size:68px;
+  line-height:1.25;
+  letter-spacing:.05em;
+  margin:6px 0 22px;
+}
+
+.kanri-since{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  color:#d5b26c;
+  font-family:"Noto Serif JP",serif;
+  font-size:20px;
+  letter-spacing:.18em;
+  margin-bottom:28px;
+}
+
+.kanri-since span{
+  width:80px;
+  height:1px;
+  background:#d5b26c;
+}
+
+.kanri-copy{
+  font-size:21px;
+  line-height:2;
+  margin-bottom:44px;
+}
+
+.kanri-points{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(6px);
+}
+
+.point{
+  text-align:center;
+  padding:20px 12px;
+  border-right:1px solid rgba(255,255,255,.25);
+}
+
+.point:last-child{border-right:none}
+
+.point i{
+  display:block;
+  font-size:28px;
+  color:#d5b26c;
+  margin-bottom:10px;
+}
+
+.point span{
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* about */
+.kanri-about{
+  padding:82px 0 70px;
+  background:#f8f6f2;
+}
+
+.section-title{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:22px;
+  margin-bottom:36px;
+}
+
+.section-title span{
+  width:60px;
+  height:1px;
+  background:#c8aa68;
+}
+
+.section-title h2{
+  font-family:"Noto Serif JP",serif;
+  font-size:38px;
+  letter-spacing:.08em;
+}
+
+.about-layout{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:40px;
+  align-items:center;
+  margin-bottom:44px;
+}
+
+.about-text{
+  font-size:19px;
+  color:#444;
+  line-height:2.2;
+}
+
+.about-image{
+  min-height:280px;
+  background:
+    linear-gradient(rgba(255,255,255,.15),rgba(255,255,255,.15)),
+    url("kanri-image.jpg") center center / cover no-repeat;
+  border-radius:6px;
+}
+
+/* list */
 .kanri-list{
   max-width:920px;
   margin:0 auto 46px;
   display:flex;
   flex-direction:column;
-  gap:22px;
+  gap:16px;
 }
 
 .list-item{
   background:#fff;
-  border-radius:24px;
-  box-shadow:0 10px 30px rgba(0,0,0,.05);
-  padding:28px 32px;
+  border-radius:22px;
+  box-shadow:0 4px 14px rgba(0,0,0,.04);
+  padding:24px 24px;
   display:flex;
   align-items:center;
-  gap:20px;
+  gap:16px;
   color:#12366f;
-  font-size:22px;
+  font-size:18px;
   font-weight:700;
-  line-height:1.6;
-  transition:.25s ease;
-}
-
-.list-item:hover{
-  transform:translateY(-2px);
-  box-shadow:0 14px 34px rgba(0,0,0,.08);
+  line-height:1.5;
 }
 
 .list-item i{
-  width:38px;
-  height:38px;
+  width:18px;
+  height:18px;
   border-radius:50%;
   background:#d1ad52;
   color:#fff;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:16px;
+  font-size:9px;
   flex-shrink:0;
 }
 
-.list-item span{
-  flex:1;
+/* button */
+.kanri-btn{
+  max-width:760px;
+  margin:0 auto;
+  background:linear-gradient(135deg,#0b2d5f,#244da0);
+  color:#fff;
+  padding:24px 36px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
 }
 
-/* =========================
-   mobile
-========================= */
+.kanri-btn i{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  border:2px solid rgba(255,255,255,.75);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:34px;
+}
 
+.kanri-btn small{
+  display:block;
+  font-size:14px;
+  opacity:.82;
+}
+
+.kanri-btn strong{
+  font-family:"Noto Serif JP",serif;
+  font-size:38px;
+  font-weight:500;
+}
+
+.kanri-btn .arrow{
+  font-size:38px;
+}
+
+/* other */
+.other-contact{
+  text-align:center;
+  margin-top:24px;
+}
+
+.other-contact a{
+  color:#12366f;
+  font-weight:700;
+}
+
+/* mobile */
 @media(max-width:640px){
 
-  .kanri-list{
+  .header-inner{
+    display:block;
+  }
+
+  .logo img{
+    width:54px;
+    height:54px;
+  }
+
+  .logo-title{
+    font-size:22px;
+  }
+
+  .logo-sub{
+    font-size:11px;
+  }
+
+  nav ul{
+    margin-top:16px;
+    flex-wrap:wrap;
     gap:18px;
+  }
+
+  nav a{
+    font-size:14px;
+  }
+
+  .kanri-inner{
+    padding:86px 0 58px;
+  }
+
+  .kanri-top{
+    font-size:30px;
+  }
+
+  .kanri-inner h1{
+    font-size:45px;
+    line-height:1.35;
+  }
+
+  .kanri-since{
+    font-size:14px;
+    gap:10px;
+  }
+
+  .kanri-since span{
+    width:34px;
+  }
+
+  .kanri-copy{
+    font-size:16px;
+    line-height:2;
+    margin-bottom:32px;
+  }
+
+  .kanri-points{
+    grid-template-columns:1fr;
+    border-radius:12px;
+  }
+
+  .point{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    text-align:left;
+    border-right:none;
+    border-bottom:1px solid rgba(255,255,255,.25);
+    padding:16px 18px;
+  }
+
+  .point:last-child{
+    border-bottom:none;
+  }
+
+  .point i{
+    margin:0;
+    width:34px;
+  }
+
+  .kanri-about{
+    padding:58px 0;
+  }
+
+  .section-title{
+    gap:12px;
+    margin-bottom:28px;
+  }
+
+  .section-title span{
+    width:28px;
+  }
+
+  .section-title h2{
+    font-size:26px;
+    line-height:1.5;
+  }
+
+  .about-layout{
+    grid-template-columns:1fr;
+    gap:26px;
+  }
+
+  .about-text{
+    font-size:16px;
+    line-height:2.1;
+  }
+
+  .about-image{
+    min-height:220px;
+  }
+
+  .kanri-list{
+    gap:16px;
     margin-bottom:42px;
   }
 
   .list-item{
-    border-radius:22px;
     padding:24px 20px;
-    font-size:18px;
-    gap:16px;
-    line-height:1.7;
+    font-size:16px;
+    border-radius:20px;
   }
 
   .list-item i{
-    width:32px;
-    height:32px;
-    font-size:13px;
+    width:18px;
+    height:18px;
+    font-size:8px;
   }
 
+  .kanri-btn{
+    padding:18px 20px;
+    border-radius:28px;
+  }
+
+  .kanri-btn i{
+    width:48px;
+    height:48px;
+    font-size:24px;
+  }
+
+  .kanri-btn small{
+    font-size:11px;
+  }
+
+  .kanri-btn strong{
+    font-size:26px;
+  }
+
+  .kanri-btn .arrow{
+    font-size:26px;
+  }
 }
-
 </style>
+</head>
 
-<!-- list -->
-<div class="kanri-list">
+<body>
 
-  <div class="list-item">
-    <i class="fa-solid fa-check"></i>
-    <span>賃貸物件の管理・運営</span>
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">
+      <img src="favicon.png" alt="ユタカ不動産ロゴ">
+      <div>
+        <div class="logo-title">株式会社ユタカ不動産</div>
+        <div class="logo-sub">昭和51年創業　刈谷市密着の不動産会社</div>
+      </div>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="index.html#services">事業内容</a></li>
+        <li><a href="index.html#company">会社概要</a></li>
+        <li><a href="index.html#contact">お問い合わせ</a></li>
+      </ul>
+    </nav>
   </div>
+</header>
 
-  <div class="list-item">
-    <i class="fa-solid fa-check"></i>
-    <span>月極駐車場管理</span>
+<section class="kanri-hero">
+  <div class="kanri-inner">
+
+    <p class="kanri-top">刈谷市の</p>
+
+    <h1>不動産管理・管理委託</h1>
+
+    <div class="kanri-since">
+      <span></span>
+      SINCE 1976
+      <span></span>
+    </div>
+
+    <p class="kanri-copy">
+      昭和51年創業・地域密着。<br>
+      賃貸物件・月極駐車場など、<br>
+      不動産管理を丁寧にサポートいたします。
+    </p>
+
+    <div class="kanri-points">
+      <div class="point">
+        <i class="fa-solid fa-building"></i>
+        <span>賃貸管理の<br>プロフェッショナル</span>
+      </div>
+
+      <div class="point">
+        <i class="fa-solid fa-square-parking"></i>
+        <span>月極駐車場<br>管理に対応</span>
+      </div>
+
+      <div class="point">
+        <i class="fa-solid fa-user"></i>
+        <span>入居者対応<br>も安心</span>
+      </div>
+
+      <div class="point">
+        <i class="fa-solid fa-clipboard-list"></i>
+        <span>収益向上を<br>サポート</span>
+      </div>
+
+      <div class="point">
+        <i class="fa-solid fa-handshake"></i>
+        <span>地域密着で<br>迅速対応</span>
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <div class="list-item">
-    <i class="fa-solid fa-check"></i>
-    <span>入居者対応・賃料管理</span>
+<section class="kanri-about">
+  <div class="container">
+
+    <div class="section-title">
+      <span></span>
+      <h2>不動産管理・管理委託について</h2>
+      <span></span>
+    </div>
+
+    <div class="about-layout">
+      <div class="about-text">
+        <p>
+          株式会社ユタカ不動産では、刈谷市を中心に
+          不動産管理・管理委託のご相談を承っております。
+        </p>
+        <br>
+        <p>
+          賃貸物件・月極駐車場などの管理を通じて、
+          オーナー様の安定した運用をサポートいたします。
+        </p>
+        <br>
+        <p>
+          入居者対応、賃料管理、空室募集、駐車場管理など、
+          地域密着ならではの対応を心がけています。
+        </p>
+        <br>
+        <p>
+          昭和51年創業の経験を活かし、安心してご相談いただける
+          管理体制を目指しております。
+        </p>
+      </div>
+
+      <div class="about-image"></div>
+    </div>
+
+    <div class="kanri-list">
+      <div class="list-item">
+        <i class="fa-solid fa-check"></i>
+        <span>賃貸物件の管理・運営</span>
+      </div>
+
+      <div class="list-item">
+        <i class="fa-solid fa-check"></i>
+        <span>月極駐車場管理</span>
+      </div>
+
+      <div class="list-item">
+        <i class="fa-solid fa-check"></i>
+        <span>入居者対応・賃料管理</span>
+      </div>
+
+      <div class="list-item">
+        <i class="fa-solid fa-check"></i>
+        <span>空室募集のご相談</span>
+      </div>
+
+      <div class="list-item">
+        <i class="fa-solid fa-check"></i>
+        <span>地域密着ならではの情報力</span>
+      </div>
+    </div>
+
+    <a href="tel:0566231758" class="kanri-btn">
+      <i class="fa-solid fa-phone"></i>
+
+      <div>
+        <small>まずはお気軽にご相談ください</small>
+        <strong>お電話で相談する</strong>
+      </div>
+
+      <span class="arrow">〉</span>
+    </a>
+
+    <div class="other-contact">
+      <a href="index.html#contact">⌄ その他のお問い合わせ方法はこちら</a>
+    </div>
+
   </div>
+</section>
 
-  <div class="list-item">
-    <i class="fa-solid fa-check"></i>
-    <span>空室募集のご相談</span>
-  </div>
-
-  <div class="list-item">
-    <i class="fa-solid fa-check"></i>
-    <span>地域密着ならではの情報力</span>
-  </div>
-
-</div>
+</body>
+</html>
