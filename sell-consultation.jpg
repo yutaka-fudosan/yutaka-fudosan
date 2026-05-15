@@ -1,0 +1,15 @@
+/* =========================
+   売却相談 下画像
+========================= */
+
+.baikyaku-about{
+
+  background:
+    linear-gradient(
+      rgba(248,246,242,.94),
+      rgba(248,246,242,.94)
+    ),
+    url("sell-consultation.jpg")
+    right bottom / 42% auto no-repeat;
+
+}
