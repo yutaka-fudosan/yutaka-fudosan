@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="canonical" href="https://yutaka-fudosan.com/">
-<link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
-<link rel="apple-touch-icon" href="/favicon.png">
-  
-<title>刈谷市の不動産売買・管理・賃貸なら株式会社ユタカ不動産</title>
-<meta name="description" content="刈谷市で不動産売買・管理・賃貸のご相談なら株式会社ユタカ不動産。昭和51年創業、地域密着で売却相談、賃貸物件の管理、オーナー様の管理委託を丁寧にサポートします。" />
+  <title>刈谷市の不動産売買・管理・賃貸なら株式会社ユタカ不動産</title>
+  <meta name="description" content="刈谷市で不動産売買・管理・賃貸のご相談なら株式会社ユタカ不動産。昭和51年創業、地域密着で売却相談、賃貸物件の管理、オーナー様の管理委託を丁寧にサポートします。" />
+
+  <link rel="canonical" href="https://yutaka-fudosan.com/">
+  <link rel="icon" type="image/png" href="/favicon.png" sizes="48x48">
+  <link rel="apple-touch-icon" href="/favicon.png">
 
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 
@@ -29,23 +28,9 @@
       font-family: 'Noto Sans JP', sans-serif;
       font-size: 16px;
       line-height: 1.8;
-      color: #333;
-      background: #f7f8fa;
+      color: #222;
+      background: #f8f6f1;
     }
-
-.about-box {
-  display: block;
-}
-
-.about-text {
-  max-width: 800px;
-  margin: 0 auto;
-}
-    
-    .service-icon {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
 
     a {
       text-decoration: none;
@@ -59,13 +44,13 @@
 
     .container {
       width: 90%;
-      max-width: 1100px;
+      max-width: 1180px;
       margin: 0 auto;
     }
 
     header {
-      background: #ffffff;
-      border-bottom: 1px solid #e5e7eb;
+      background: #fff;
+      border-bottom: 2px solid #1f3c88;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -76,28 +61,48 @@
       justify-content: space-between;
       align-items: center;
       padding: 16px 0;
-      gap: 20px;
+      gap: 28px;
     }
 
-.logo {
-  font-family: 'Zen Maru Gothic', "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #1f3c88;
-  white-space: nowrap;
-}
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      white-space: nowrap;
+    }
+
+    .logo img {
+      width: 58px;
+      height: 58px;
+      object-fit: contain;
+    }
+
+    .logo-text h1 {
+      font-family: 'Zen Maru Gothic', "Hiragino Maru Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+      font-size: 30px;
+      color: #1f3c88;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .logo-text p {
+      margin-top: 4px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      color: #9b7b3f;
+    }
 
     nav ul {
       display: flex;
       list-style: none;
-      gap: 24px;
+      gap: 28px;
       flex-wrap: wrap;
       justify-content: flex-end;
     }
 
     nav a {
       font-size: 14px;
-      color: #444;
+      color: #222;
       font-weight: 500;
       transition: 0.2s;
     }
@@ -108,86 +113,72 @@
 
     .hero {
       background:
-        linear-gradient(rgba(20, 35, 70, 0.58), rgba(20, 35, 70, 0.58)),
-        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+        linear-gradient(rgba(13, 34, 68, 0.62), rgba(13, 34, 68, 0.62)),
+        url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1800&q=80")
+        center center / cover no-repeat;
       color: #fff;
       text-align: center;
-      padding: 110px 20px 90px;
+      padding: 145px 20px 120px;
     }
 
-.hero .sub-copy {
-  display: block;
-  background: none;
-  border: none;
-  padding: 0;
-  border-radius: 0;
-  font-size: 15px;
-  margin: 0 auto 18px;
-  backdrop-filter: none;
-  color: rgba(255, 255, 255, 0.92);
-}
-    .hero h1 {
-      font-size: 38px;
-      line-height: 1.4;
+    .hero h2 {
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 58px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      line-height: 1.45;
       margin-bottom: 18px;
-      font-weight: 700;
-      letter-spacing: 1px;
+    }
+
+    .hero .since {
+      color: #d4b06a;
+      letter-spacing: 0.22em;
+      font-size: 18px;
+      margin-bottom: 28px;
     }
 
     .hero p {
-      font-size: 15px;
-      max-width: 760px;
-      margin: 0 auto 28px;
-      color: rgba(255, 255, 255, 0.92);
+      font-size: 18px;
+      line-height: 2;
+      margin-bottom: 34px;
+      color: rgba(255,255,255,0.94);
     }
 
     .hero-buttons,
     .contact-buttons {
       display: flex;
       justify-content: center;
-      gap: 14px;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
-.btn {
-  display: inline-block;
-  padding: 13px 28px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 700;
-  transition: 0.2s ease;
-  border: none;
-}
+    .btn,
+    .btn-service {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 700;
+      transition: 0.25s ease;
+      border: none;
+    }
+
+    .btn:hover,
+    .btn-service:hover {
+      transform: translateY(-2px);
+    }
 
     .btn-service {
-  background: #1f3c88;
-  color: #fff;
-  margin: 0 8px;
-  box-shadow: 0 4px 12px rgba(31, 60, 136, 0.15);
-}
-
-.btn-service:hover {
-  background: #18306d;
-}
-
-    .btn:hover {
-      transform: translateY(-1px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-    }
-
-    .btn-primary {
-      background: #ffffff;
-      color: #1f3c88;
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.7);
+      min-width: 310px;
+      padding: 18px 34px;
+      background: rgba(18, 45, 95, 0.92);
+      border: 1px solid rgba(255,255,255,0.55);
       color: #fff;
-      background: rgba(255, 255, 255, 0.08);
+      font-size: 17px;
     }
 
-    .btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.16);
+    .btn-service:hover {
+      background: #16376f;
     }
 
     .btn-tel {
@@ -205,19 +196,26 @@
       color: #fff;
     }
 
+    .btn-mail {
+      background: #fff;
+      color: #1f3c88;
+    }
+
     section {
-      padding: 70px 0;
+      padding: 76px 0;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 42px;
+      margin-bottom: 44px;
     }
 
     .section-title h2 {
-      font-size: 30px;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 34px;
       color: #1f3c88;
       margin-bottom: 10px;
+      font-weight: 600;
     }
 
     .section-title p {
@@ -225,38 +223,39 @@
       color: #666;
     }
 
-    .about {
+    .about,
+    .company {
       background: #fff;
     }
 
     .about-box {
       display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 36px;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 44px;
       align-items: center;
     }
 
     .about-text h3 {
       font-size: 26px;
       margin-bottom: 18px;
-      color: #222;
+      color: #1f3c88;
     }
 
     .about-text p {
       margin-bottom: 14px;
-      color: #555;
+      color: #444;
       font-size: 15px;
     }
 
     .about-image img {
-      border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      box-shadow: 0 14px 32px rgba(0,0,0,0.12);
       height: 100%;
       object-fit: cover;
     }
 
     .services {
-      background: #f7f8fa;
+      background: #f8f6f1;
     }
 
     .service-grid {
@@ -265,39 +264,53 @@
       gap: 24px;
     }
 
-.service-card {
-  background: #fff;
-  border: 1px solid #e6e0d6;
-  padding: 32px 28px;
-  border-radius: 4px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.06);
-  transition: all 0.25s ease;
-}
+    .service-card {
+      background: #fff;
+      border: 1px solid #e3d7c2;
+      padding: 34px 30px;
+      border-radius: 4px;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+      transition: 0.25s ease;
+    }
 
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
-}
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 38px rgba(0,0,0,0.1);
+    }
 
-.service-card h3 {
-  font-size: 22px;
-  margin-bottom: 14px;
-  color: #1a1a1a;
-}
+    .service-label {
+      display: inline-block;
+      margin-bottom: 18px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      color: #9b7b3f;
+      font-weight: 700;
+    }
+
+    .service-card h3 {
+      font-size: 23px;
+      color: #1f3c88;
+      margin-bottom: 14px;
+    }
 
     .service-card p {
       font-size: 14px;
-      color: #555;
+      color: #444;
     }
 
-.service-label {
-  display: inline-block;
-  margin-bottom: 18px;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  color: #9b7b3f;
-  font-weight: 600;
-}
+    .service-buttons {
+      grid-column: 1 / -1;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+
+    .service-buttons .btn-service {
+      background: #1f3c88;
+      box-shadow: 0 6px 16px rgba(31,60,136,0.18);
+    }
 
     .features {
       background: #fff;
@@ -310,15 +323,15 @@
     }
 
     .feature-box {
-      background: #f9fafb;
-      border: 1px solid #e5e7eb;
-      border-radius: 16px;
-      padding: 24px 20px;
+      background: #fbfaf7;
+      border: 1px solid #e3d7c2;
+      border-radius: 4px;
+      padding: 28px 22px;
       text-align: center;
     }
 
     .feature-box h3 {
-      font-size: 18px;
+      font-size: 20px;
       color: #1f3c88;
       margin-bottom: 10px;
     }
@@ -329,41 +342,43 @@
     }
 
     .contact-section {
-      padding-top: 0;
+      background: #f8f6f1;
     }
 
     .cta {
-      background: linear-gradient(135deg, #1f3c88, #3157b7);
+      background: linear-gradient(135deg, #102b5c, #1f3c88);
       color: #fff;
       text-align: center;
-      border-radius: 24px;
-      padding: 48px 24px;
+      border-radius: 4px;
+      padding: 52px 28px;
     }
 
     .cta h2 {
-      font-size: 30px;
+      font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+      font-size: 34px;
       margin-bottom: 14px;
+      font-weight: 600;
     }
 
     .cta p {
       font-size: 15px;
-      max-width: 700px;
-      margin: 0 auto 24px;
-      color: rgba(255, 255, 255, 0.9);
+      max-width: 720px;
+      margin: 0 auto 26px;
+      color: rgba(255,255,255,0.92);
     }
 
     .qr-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
-      margin-top: 32px;
+      margin-top: 34px;
     }
 
     .qr-card {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      border-radius: 18px;
-      padding: 22px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.22);
+      border-radius: 4px;
+      padding: 24px;
       text-align: center;
     }
 
@@ -376,34 +391,22 @@
       width: 210px;
       max-width: 100%;
       margin: 0 auto 12px;
-      border-radius: 12px;
       background: #fff;
       padding: 8px;
-    }
-
-    .qr-card p {
-      font-size: 14px;
-      color: rgba(255, 255, 255, 0.92);
-      margin-bottom: 0;
-    }
-
-    .company {
-      background: #fff;
+      border-radius: 4px;
     }
 
     .company-table {
       width: 100%;
       border-collapse: collapse;
       background: #fff;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      border: 1px solid #e3d7c2;
     }
 
     .company-table th,
     .company-table td {
       padding: 16px 18px;
-      border-bottom: 1px solid #edf0f4;
+      border-bottom: 1px solid #eee7dc;
       text-align: left;
       font-size: 14px;
       vertical-align: top;
@@ -411,25 +414,25 @@
 
     .company-table th {
       width: 180px;
-      background: #f8fafc;
+      background: #fbfaf7;
       color: #1f3c88;
       font-weight: 700;
     }
 
     .company-table ul {
-      margin: 0;
       padding-left: 18px;
     }
 
     .access {
-      background: #f7f8fa;
+      background: #f8f6f1;
     }
 
     .access-box {
       background: #fff;
-      border-radius: 18px;
+      border: 1px solid #e3d7c2;
+      border-radius: 4px;
       padding: 28px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
     }
 
     .access-info {
@@ -437,11 +440,6 @@
       margin-bottom: 20px;
       color: #444;
       font-size: 15px;
-    }
-
-    .map-frame {
-      border-radius: 16px;
-      overflow: hidden;
     }
 
     .map-frame iframe {
@@ -465,6 +463,11 @@
     }
 
     @media (max-width: 900px) {
+      .header-inner,
+      .about-box {
+        flex-direction: column;
+      }
+
       .about-box,
       .service-grid,
       .feature-grid,
@@ -472,45 +475,50 @@
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        font-size: 30px;
-      }
-
-      .section-title h2,
-      .cta h2 {
-        font-size: 26px;
-      }
-    }
-
-    @media (max-width: 640px) {
       .header-inner {
-        flex-direction: column;
         align-items: flex-start;
       }
 
       nav ul {
-        gap: 14px;
         justify-content: flex-start;
+        gap: 16px;
       }
 
+      .hero h2 {
+        font-size: 38px;
+      }
+
+      .logo-text h1 {
+        font-size: 24px;
+      }
+
+      .logo img {
+        width: 48px;
+        height: 48px;
+      }
+    }
+
+    @media (max-width: 640px) {
       .hero {
-        padding: 85px 16px 70px;
+        padding: 96px 16px 82px;
       }
 
-      .hero h1 {
-        font-size: 26px;
+      .hero h2 {
+        font-size: 30px;
       }
 
       .hero p {
-        font-size: 14px;
+        font-size: 15px;
       }
 
-      .logo {
-        font-size: 20px;
+      .btn-service {
+        min-width: 100%;
+        font-size: 15px;
       }
 
-      .section-title h2 {
-        font-size: 24px;
+      .section-title h2,
+      .cta h2 {
+        font-size: 27px;
       }
 
       .company-table th,
@@ -534,11 +542,19 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
   <div class="container header-inner">
-    <div class="logo">株式会社ユタカ不動産</div>
+    <div class="logo">
+      <img src="favicon.png" alt="ユタカ不動産ロゴ">
+      <div class="logo-text">
+        <h1>株式会社ユタカ不動産</h1>
+        <p>昭和51年創業　刈谷市密着の不動産会社</p>
+      </div>
+    </div>
+
     <nav>
       <ul>
         <li><a href="#about">会社案内</a></li>
@@ -554,31 +570,20 @@
 
 <section class="hero">
   <div class="container">
-    <h1>
-      刈谷市の不動産売買・管理・賃貸なら<br>
-      株式会社ユタカ不動産
-    </h1>
-    <p class="sub-copy">
-      昭和51年創業・地域密着で安心の不動産サービス
-    </p>
+    <h2>地域とともに、未来をつなぐ</h2>
+    <div class="since">SINCE 1976</div>
     <p>
-      不動産売買、管理、賃貸、不動産売却相談まで、地域密着の不動産会社として丁寧に対応いたします。  <br>
-      オーナー様の資産活用や管理のご相談もお気軽にお問い合わせください。
+      刈谷市で不動産売買・管理・賃貸のご相談なら、<br>
+      株式会社ユタカ不動産におまかせください。
     </p>
 
     <div class="hero-buttons">
-      <a href="tel:0566231758" class="btn btn-tel">お電話はこちら</a>
-      <a href="https://lin.ee/W2HbWIG" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで問い合わせ</a>
-      <a href="https://www.instagram.com/yutaka_fudosan/"
-   class="btn btn-insta"
-   target="_blank"
-   rel="noopener noreferrer">
-   Instagramを見る
-</a>
-      <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせ</a>
+      <a href="baikyaku.html" class="btn-service">不動産売却相談はこちら　〉</a>
+      <a href="kanri.html" class="btn-service">不動産管理・管理委託はこちら　〉</a>
     </div>
   </div>
 </section>
+
 <section class="about" id="about">
   <div class="container">
     <div class="section-title">
@@ -588,28 +593,17 @@
 
     <div class="about-box">
       <div class="about-text">
-        <h3>刈谷市を中心に、<br>
-          安心できる不動産サービスを。</h3>
-        <p>
-          株式会社ユタカ不動産は、昭和51年の創業以来、地域に根差した不動産会社として、
-          住まい・土地・駐車場に関するさまざまなご相談に対応してまいりました。
-        </p>
-        <p>
-          不動産売買や賃貸仲介はもちろん、不動産管理、
-          不動産売却のご相談まで、地元ならではの情報力と丁寧な対応でサポートいたします。
-        </p>
-        <p>
-          「相談してよかった」と感じていただける身近な不動産会社を目指し、
-          これからも地域の皆さまのお役に立てるよう努めてまいります。
-        </p>
+        <h3>刈谷市を中心に、安心できる不動産サービスを。</h3>
+        <p>株式会社ユタカ不動産は、昭和51年の創業以来、地域に根差した不動産会社として、住まい・土地・駐車場に関するさまざまなご相談に対応してまいりました。</p>
+        <p>不動産売買や賃貸仲介はもちろん、不動産管理、不動産売却のご相談まで、地元ならではの情報力と丁寧な対応でサポートいたします。</p>
+        <p>「相談してよかった」と感じていただける身近な不動産会社を目指し、これからも地域の皆さまのお役に立てるよう努めてまいります。</p>
       </div>
 
-<!-- 👇ここに入れる -->
-<div class="about-image">
-  <img src="22366810.jpg" alt="不動産相談イメージ">
-</div>
-
-</div>
+      <div class="about-image">
+        <img src="22366810.jpg" alt="不動産相談イメージ">
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="services" id="services">
@@ -619,82 +613,79 @@
       <p>不動産売買・管理・売却相談を中心に、地域の不動産ニーズに対応しています。</p>
     </div>
 
- <div class="service-grid">
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅰ</span>
+        <h3>不動産売買仲介</h3>
+        <p>土地・戸建て・マンションなど、地域事情を踏まえた売買のご提案をいたします。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅰ</span>
-    <h3>不動産売買仲介</h3>
-    <p>土地・戸建て・マンションなど、地域事情を踏まえた売買のご提案をいたします。</p>
-  </div>
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅱ</span>
+        <h3>賃貸仲介</h3>
+        <p>住まい探しから契約まで、お客様のご希望に合わせて丁寧にサポートいたします。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅱ</span>
-    <h3>賃貸仲介</h3>
-    <p>住まい探しから契約まで、お客様のご希望に合わせて丁寧にサポートいたします。</p>
-  </div>
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅲ</span>
+        <h3>不動産管理</h3>
+        <p>賃貸物件・駐車場の管理を通じて、オーナー様の安定運用を支えます。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅲ</span>
-    <h3>不動産管理</h3>
-    <p>賃貸物件・駐車場の管理を通じて、オーナー様の安定運用を支えます。</p>
-  </div>
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅳ</span>
+        <h3>月極駐車場</h3>
+        <p>刈谷市周辺の月極駐車場について、空き状況や条件確認もスムーズに対応します。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅳ</span>
-    <h3>月極駐車場</h3>
-    <p>刈谷市周辺の月極駐車場について、空き状況や条件確認もスムーズに対応します。</p>
-  </div>
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅴ</span>
+        <h3>不動産売却相談</h3>
+        <p>相続・住み替え・資産整理など、ご事情に応じた売却方法をご提案いたします。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅴ</span>
-    <h3>不動産売却相談</h3>
-    <p>相続・住み替え・資産整理など、ご事情に応じた売却方法をご提案いたします。</p>
-  </div>
+      <div class="service-card">
+        <span class="service-label">SERVICE Ⅵ</span>
+        <h3>住宅リフォーム</h3>
+        <p>住まいの修繕・改修についても、内容に応じてご相談いただけます。</p>
+      </div>
 
-  <div class="service-card">
-    <span class="service-label">SERVICE Ⅵ</span>
-    <h3>住宅リフォーム</h3>
-    <p>住まいの修繕・改修についても、内容に応じてご相談いただけます。</p>
-  </div>
-<div style="text-align:center; margin-top:40px;">
-  <a href="baikyaku.html" class="btn btn-service">
-    不動産売却相談はこちら
-  </a>
-
-  <a href="kanri.html" class="btn btn-service">
-    不動産管理・管理委託はこちら
-  </a>
-</div>
+      <div class="service-buttons">
+        <a href="baikyaku.html" class="btn-service">不動産売却相談はこちら　〉</a>
+        <a href="kanri.html" class="btn-service">不動産管理・管理委託はこちら　〉</a>
+      </div>
+    </div>
   </div>
 </section>
 
-  <section class="features" id="features">
-    <div class="container">
-      <div class="section-title">
-        <h2>当社の強み</h2>
-        <p>地域密着だからこそできる、きめ細かな対応があります。</p>
+<section class="features" id="features">
+  <div class="container">
+    <div class="section-title">
+      <h2>当社の強み</h2>
+      <p>地域密着だからこそできる、きめ細かな対応があります。</p>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-box">
+        <h3>地域密着</h3>
+        <p>刈谷市周辺の不動産情報を熟知し、地域に合ったご提案が可能です。</p>
       </div>
 
-      <div class="feature-grid">
-        <div class="feature-box">
-          <h3>地域密着</h3>
-          <p>刈谷市周辺の不動産情報を熟知し、地域に合ったご提案が可能です。</p>
-        </div>
+      <div class="feature-box">
+        <h3>長年の実績</h3>
+        <p>昭和51年創業の経験を活かし、多様な不動産のご相談に対応しています。</p>
+      </div>
 
-        <div class="feature-box">
-          <h3>長年の実績</h3>
-          <p>昭和51年創業の経験を活かし、多様な不動産のご相談に対応しています。</p>
-        </div>
-
-        <div class="feature-box">
-          <h3>丁寧な対応</h3>
-          <p>初めての方にも分かりやすく、安心してご相談いただける対応を心がけています。</p>
-        </div>
+      <div class="feature-box">
+        <h3>丁寧な対応</h3>
+        <p>初めての方にも分かりやすく、安心してご相談いただける対応を心がけています。</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="container contact-section" id="contact">
+<section class="contact-section" id="contact">
+  <div class="container">
     <div class="cta">
       <h2>不動産のこと、お気軽にご相談ください</h2>
       <p>
@@ -705,13 +696,8 @@
       <div class="contact-buttons">
         <a href="tel:0566231758" class="btn btn-tel">お電話はこちら</a>
         <a href="https://lin.ee/W2HbWIG" class="btn btn-line" target="_blank" rel="noopener noreferrer">LINEで問い合わせ</a>
-        <a href="https://www.instagram.com/yutaka_fudosan/"
-   class="btn btn-insta"
-   target="_blank"
-   rel="noopener noreferrer">
-   Instagramを見る
-</a>
-        <a href="mailto:office@yutaka-fudosan.com" class="btn btn-primary">メールで問い合わせ</a>
+        <a href="https://www.instagram.com/yutaka_fudosan/" class="btn btn-insta" target="_blank" rel="noopener noreferrer">Instagramを見る</a>
+        <a href="mailto:office@yutaka-fudosan.com" class="btn btn-mail">メールで問い合わせ</a>
       </div>
 
       <div class="qr-grid">
@@ -728,106 +714,80 @@
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="company" id="company">
-    <div class="container">
-      <div class="section-title">
-        <h2>会社概要</h2>
-        <p>株式会社ユタカ不動産の基本情報です。</p>
+<section class="company" id="company">
+  <div class="container">
+    <div class="section-title">
+      <h2>会社概要</h2>
+      <p>株式会社ユタカ不動産の基本情報です。</p>
+    </div>
+
+    <table class="company-table">
+      <tr><th>会社名</th><td>株式会社ユタカ不動産</td></tr>
+      <tr><th>所在地</th><td>愛知県刈谷市新栄町7丁目61番地</td></tr>
+      <tr><th>電話番号</th><td><a href="tel:0566231758">0566-23-1758</a></td></tr>
+      <tr><th>FAX番号</th><td>0566-24-7621</td></tr>
+      <tr><th>代表者</th><td>酒井 晶久</td></tr>
+      <tr><th>免許番号</th><td>愛知県知事（3）第22978号</td></tr>
+      <tr><th>営業時間</th><td>10:00〜19:00</td></tr>
+      <tr><th>定休日</th><td>日曜日・年末年始・不定休</td></tr>
+      <tr>
+        <th>事業内容</th>
+        <td>
+          <ul>
+            <li>不動産売買・賃貸仲介</li>
+            <li>不動産管理・運営</li>
+            <li>月極駐車場管理</li>
+            <li>不動産売却・買取</li>
+            <li>空き家・土地活用</li>
+            <li>住宅リフォーム・修繕</li>
+          </ul>
+        </td>
+      </tr>
+      <tr><th>メール</th><td><a href="mailto:office@yutaka-fudosan.com">office@yutaka-fudosan.com</a></td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="container">
+    <div class="section-title">
+      <h2>アクセス</h2>
+      <p>ご来店の際はお気軽にお立ち寄りください。</p>
+    </div>
+
+    <div class="access-box">
+      <div class="access-info">
+        <p>【住所】愛知県刈谷市新栄町7丁目61番地</p>
+        <p>【営業時間】10:00〜19:00</p>
+        <p>【定休日】日曜日・年末年始・不定休</p>
       </div>
 
-      <table class="company-table">
-        <tr>
-          <th>会社名</th>
-          <td>株式会社ユタカ不動産</td>
-        </tr>
-        <tr>
-          <th>所在地</th>
-          <td>愛知県刈谷市新栄町7丁目61番地</td>
-        </tr>
-        <tr>
-          <th>電話番号</th>
-          <td><a href="tel:0566231758">0566-23-1758</a></td>
-        </tr>
-        <tr>
-          <th>FAX番号</th>
-          <td>0566-24-7621</td>
-        </tr>
-        <tr>
-          <th>代表者</th>
-          <td>酒井 晶久</td>
-        </tr>
-        <tr>
-          <th>免許番号</th>
-          <td>愛知県知事（3）第22978号</td>
-        </tr>
-        <tr>
-          <th>営業時間</th>
-          <td>10:00〜19:00</td>
-        </tr>
-        <tr>
-          <th>定休日</th>
-          <td>日曜日・年末年始・不定休</td>
-        </tr>
-        <tr>
-          <th>事業内容</th>
-          <td>
-            <ul>
-              <li>不動産売買・賃貸仲介</li>
-              <li>不動産管理・運営</li>
-              <li>月極駐車場管理</li>
-              <li>不動産売却・買取</li>
-              <li>空き家・土地活用</li>
-               <li>住宅リフォーム・修繕</li>
-            </ul>
-          </td>
-        </tr>
-        <tr>
-          <th>メール</th>
-          <td><a href="mailto:office@yutaka-fudosan.com">office@yutaka-fudosan.com</a></td>
-        </tr>
-      </table>
-    </div>
-  </section>
-
-  <section class="access" id="access">
-    <div class="container">
-      <div class="section-title">
-        <h2>アクセス</h2>
-        <p>ご来店の際はお気軽にお立ち寄りください。</p>
-      </div>
-
-      <div class="access-box">
-        <div class="access-info">
-          <p>【住所】愛知県刈谷市新栄町7丁目61番地</p>
-          <p>【営業時間】10:00〜19:00</p>
-          <p>【定休日】日曜日・年末年始・不定休</p>
-        </div>
-
-        <div class="map-frame">
-          <iframe
-            src="https://maps.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E6%96%B0%E6%A0%84%E7%94%BA7%E4%B8%81%E7%9B%AE61%E7%95%AA%E5%9C%B0&z=16&output=embed"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+      <div class="map-frame">
+        <iframe
+          src="https://maps.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E6%96%B0%E6%A0%84%E7%94%BA7%E4%B8%81%E7%9B%AE61%E7%95%AA%E5%9C%B0&z=16&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>
-        <a href="tel:0566231758">電話</a> /
-        <a href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE</a> /
-        <a href="https://www.instagram.com/yutaka_fudosan/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="mailto:office@yutaka-fudosan.com">メール</a>
-      </p>
-      <p>© 株式会社ユタカ不動産 All Rights Reserved.</p>
-    </div>
-  </footer>
+<footer>
+  <div class="container">
+    <p>
+      <a href="tel:0566231758">電話</a> /
+      <a href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE</a> /
+      <a href="https://www.instagram.com/yutaka_fudosan/" target="_blank" rel="noopener noreferrer">Instagram</a> /
+      <a href="mailto:office@yutaka-fudosan.com">メール</a>
+    </p>
+    <p>© 株式会社ユタカ不動産 All Rights Reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
