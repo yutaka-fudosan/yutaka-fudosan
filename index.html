@@ -33,6 +33,7 @@
       top:0;
       z-index:1000;
     }
+
     .header-inner{
       display:flex;
       justify-content:space-between;
@@ -40,17 +41,20 @@
       gap:26px;
       padding:16px 0;
     }
+
     .logo{
       display:flex;
       align-items:center;
       gap:14px;
       white-space:nowrap;
     }
+
     .logo img{
       width:70px;
       height:70px;
       object-fit:contain;
     }
+
     .logo-title{
       font-family:"Noto Serif JP",serif;
       font-size:30px;
@@ -58,11 +62,13 @@
       letter-spacing:.06em;
       line-height:1.25;
     }
+
     .logo-sub{
       font-size:13px;
       letter-spacing:.1em;
       margin-top:3px;
     }
+
     nav ul{
       display:flex;
       list-style:none;
@@ -70,10 +76,12 @@
       flex-wrap:wrap;
       justify-content:flex-end;
     }
+
     nav a{
       font-size:14px;
       font-weight:600;
     }
+
     nav a:hover{color:#9b7b3f}
 
     .hero{
@@ -84,6 +92,7 @@
         linear-gradient(rgba(8,37,82,.56),rgba(8,37,82,.6)),
         url("hero-kariya.jpg") center center / cover no-repeat;
     }
+
     .hero h1{
       font-family:"Noto Serif JP",serif;
       font-size:54px;
@@ -93,6 +102,7 @@
       margin-bottom:14px;
       text-shadow:0 2px 8px rgba(0,0,0,.25);
     }
+
     .since{
       display:flex;
       align-items:center;
@@ -104,12 +114,15 @@
       letter-spacing:.22em;
       margin-bottom:22px;
     }
-    .since::before,.since::after{
+
+    .since::before,
+    .since::after{
       content:"";
       width:58px;
       height:1px;
       background:#d8b46a;
     }
+
     .hero-copy{
       font-size:19px;
       font-weight:500;
@@ -118,12 +131,15 @@
       margin-bottom:34px;
     }
 
-    .hero-buttons,.service-buttons,.contact-buttons{
+    .hero-buttons,
+    .service-buttons,
+    .contact-buttons{
       display:flex;
       justify-content:center;
       gap:20px;
       flex-wrap:wrap;
     }
+
     .btn-main{
       display:inline-block;
       min-width:310px;
@@ -136,16 +152,19 @@
       font-weight:700;
       transition:.25s;
     }
+
     .btn-main:hover{
       background:#0b2d5f;
       transform:translateY(-2px);
     }
 
     section{padding:70px 0}
+
     .section-title{
       text-align:center;
       margin-bottom:38px;
     }
+
     .section-title h2{
       font-family:"Noto Serif JP",serif;
       font-size:32px;
@@ -155,23 +174,28 @@
       align-items:center;
       gap:18px;
     }
-    .section-title h2::before,.section-title h2::after{
+
+    .section-title h2::before,
+    .section-title h2::after{
       content:"";
       width:44px;
       height:1px;
       background:#c7a45b;
     }
+
     .section-title p{
       margin-top:12px;
       font-size:15px;
     }
 
     .services{background:#fbfaf7}
+
     .service-grid{
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
+
     .service-card{
       background:#fff;
       border:1px solid #d8c7aa;
@@ -183,6 +207,7 @@
       align-items:center;
       box-shadow:0 8px 20px rgba(0,0,0,.04);
     }
+
     .service-icon{
       width:76px;
       height:76px;
@@ -197,6 +222,7 @@
       color:#0b2d5f;
       flex-shrink:0;
     }
+
     .service-label{
       font-family:"Noto Serif JP",serif;
       font-size:13px;
@@ -205,20 +231,24 @@
       margin-bottom:6px;
       display:block;
     }
+
     .service-card h3{
       font-family:"Noto Serif JP",serif;
       font-size:25px;
       line-height:1.35;
       margin-bottom:8px;
     }
+
     .service-card p{
       color:#333;
       font-size:14px;
       line-height:1.9;
     }
+
     .service-buttons{
       margin-top:28px;
     }
+
     .service-buttons .btn-main{
       background:#0b2d5f;
       border-color:#0b2d5f;
@@ -229,12 +259,14 @@
       color:#fff;
       padding:48px 0;
     }
+
     .contact-layout{
       display:grid;
       grid-template-columns:1.4fr .9fr;
       gap:34px;
       align-items:center;
     }
+
     .contact-area h2{
       font-family:"Noto Serif JP",serif;
       font-size:30px;
@@ -242,10 +274,12 @@
       letter-spacing:.08em;
       margin-bottom:14px;
     }
+
     .contact-area p{
       color:rgba(255,255,255,.92);
       margin-bottom:24px;
     }
+
     .btn-contact{
       display:inline-block;
       padding:13px 22px;
@@ -254,6 +288,7 @@
       font-weight:700;
       color:#fff;
     }
+
     .tel{background:#0b2d5f;border:1px solid rgba(255,255,255,.4)}
     .line{background:#06c755}
     .insta{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}
@@ -264,34 +299,40 @@
       grid-template-columns:repeat(2,1fr);
       gap:22px;
     }
+
     .qr-card{
       border:1px solid rgba(255,255,255,.45);
       text-align:center;
       padding:18px;
       background:rgba(255,255,255,.05);
     }
+
     .qr-card h3{
       font-family:"Noto Serif JP",serif;
       font-size:16px;
       margin-bottom:10px;
     }
+
     .qr-card img{
       width:140px;
       background:#fff;
       padding:6px;
       margin:0 auto 8px;
     }
+
     .qr-card p{
       font-size:12px;
       margin:0;
     }
 
     .info-section{background:#fbfaf7}
+
     .info-grid{
       display:grid;
       grid-template-columns:1fr 1fr;
       gap:36px;
     }
+
     .info-box h2{
       font-family:"Noto Serif JP",serif;
       font-size:23px;
@@ -299,12 +340,14 @@
       padding-bottom:10px;
       border-bottom:1px solid #d8c7aa;
     }
+
     table{
       width:100%;
       border-collapse:collapse;
       background:#fff;
       border:1px solid #e1d4bf;
     }
+
     th,td{
       padding:12px 14px;
       border-bottom:1px solid #eee5d8;
@@ -312,11 +355,14 @@
       font-size:14px;
       vertical-align:top;
     }
+
     th{
       width:125px;
       background:#fbfaf7;
     }
+
     td ul{padding-left:18px}
+
     .map-frame iframe{
       width:100%;
       height:285px;
@@ -331,55 +377,70 @@
       padding:28px 0;
       font-size:13px;
     }
+
     .footer-inner{
       display:flex;
       justify-content:space-between;
       gap:20px;
       flex-wrap:wrap;
     }
+
     footer a{margin-right:18px}
 
     @media(max-width:900px){
       .header-inner{display:block}
+
       nav ul{
         margin-top:18px;
         justify-content:flex-start;
         gap:24px;
       }
+
       .service-grid,
       .contact-layout,
       .info-grid{
         grid-template-columns:1fr;
       }
+
       .hero h1{font-size:38px}
     }
 
     @media(max-width:640px){
       .container{width:92%}
+
       .logo img{
         width:58px;
         height:58px;
       }
+
       .logo-title{font-size:24px}
+
       .logo-sub{
         font-size:12px;
         letter-spacing:.05em;
       }
+
       nav ul{gap:22px}
+
       nav a{font-size:22px}
 
       .hero{
         padding:86px 16px 70px;
       }
+
       .hero h1{
         font-size:30px;
         letter-spacing:.08em;
       }
+
       .since{font-size:15px}
+
       .hero-copy{font-size:15px}
+
       .btn-main{min-width:100%}
 
       section{padding:56px 0}
+
       .section-title h2{font-size:28px}
 
       .service-card{
@@ -388,16 +449,21 @@
         padding:28px 22px;
         min-height:auto;
       }
+
       .service-icon{
         width:66px;
         height:66px;
         font-size:26px;
       }
+
       .service-card h3{font-size:29px}
+
       .service-card p{font-size:16px}
 
       .qr-grid{grid-template-columns:1fr}
+
       .footer-inner{display:block}
+
       footer a{
         display:inline-block;
         margin-bottom:8px;
