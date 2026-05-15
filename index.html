@@ -191,15 +191,11 @@
       display:flex;
       align-items:center;
       justify-content:center;
-    }
-    .service-icon svg{
-      width:48px;
-      height:48px;
-      stroke:#0b2d5f;
-      stroke-width:2.5;
-      fill:none;
-      stroke-linecap:round;
-      stroke-linejoin:round;
+      font-family:"Noto Serif JP",serif;
+      font-size:28px;
+      font-weight:700;
+      color:#0b2d5f;
+      flex-shrink:0;
     }
     .service-label{
       font-family:"Noto Serif JP",serif;
@@ -344,9 +340,7 @@
     footer a{margin-right:18px}
 
     @media(max-width:900px){
-      .header-inner{
-        display:block;
-      }
+      .header-inner{display:block}
       nav ul{
         margin-top:18px;
         justify-content:flex-start;
@@ -357,33 +351,22 @@
       .info-grid{
         grid-template-columns:1fr;
       }
-      .hero h1{
-        font-size:38px;
-      }
+      .hero h1{font-size:38px}
     }
 
     @media(max-width:640px){
       .container{width:92%}
-      .logo{
-        align-items:center;
-      }
       .logo img{
         width:58px;
         height:58px;
       }
-      .logo-title{
-        font-size:24px;
-      }
+      .logo-title{font-size:24px}
       .logo-sub{
         font-size:12px;
         letter-spacing:.05em;
       }
-      nav ul{
-        gap:22px;
-      }
-      nav a{
-        font-size:22px;
-      }
+      nav ul{gap:22px}
+      nav a{font-size:22px}
 
       .hero{
         padding:86px 16px 70px;
@@ -392,20 +375,12 @@
         font-size:30px;
         letter-spacing:.08em;
       }
-      .since{
-        font-size:15px;
-      }
-      .hero-copy{
-        font-size:15px;
-      }
-      .btn-main{
-        min-width:100%;
-      }
+      .since{font-size:15px}
+      .hero-copy{font-size:15px}
+      .btn-main{min-width:100%}
 
       section{padding:56px 0}
-      .section-title h2{
-        font-size:28px;
-      }
+      .section-title h2{font-size:28px}
 
       .service-card{
         grid-template-columns:72px 1fr;
@@ -416,24 +391,13 @@
       .service-icon{
         width:66px;
         height:66px;
+        font-size:26px;
       }
-      .service-icon svg{
-        width:40px;
-        height:40px;
-      }
-      .service-card h3{
-        font-size:29px;
-      }
-      .service-card p{
-        font-size:16px;
-      }
+      .service-card h3{font-size:29px}
+      .service-card p{font-size:16px}
 
-      .qr-grid{
-        grid-template-columns:1fr;
-      }
-      .footer-inner{
-        display:block;
-      }
+      .qr-grid{grid-template-columns:1fr}
+      .footer-inner{display:block}
       footer a{
         display:inline-block;
         margin-bottom:8px;
@@ -456,9 +420,7 @@
 
     <nav>
       <ul>
-        <li><a href="#about">会社案内</a></li>
         <li><a href="#services">事業内容</a></li>
-        <li><a href="#features">当社の強み</a></li>
         <li><a href="#company">会社概要</a></li>
         <li><a href="#access">アクセス</a></li>
         <li><a href="#contact">お問い合わせ</a></li>
@@ -493,15 +455,7 @@
     <div class="service-grid">
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M10 30 L32 12 L54 30"/>
-            <path d="M16 28 V54 H48 V28"/>
-            <path d="M25 54 V38 H39 V54"/>
-            <path d="M22 31 H29"/>
-            <path d="M35 31 H42"/>
-          </svg>
-        </div>
+        <div class="service-icon">売</div>
         <div>
           <span class="service-label">SERVICE I</span>
           <h3>不動産売買仲介</h3>
@@ -510,13 +464,7 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M10 32 L32 14 L54 32"/>
-            <path d="M18 30 V54 H46 V30"/>
-            <path d="M28 54 V40 H36 V54"/>
-          </svg>
-        </div>
+        <div class="service-icon">貸</div>
         <div>
           <span class="service-label">SERVICE II</span>
           <h3>賃貸仲介</h3>
@@ -525,18 +473,7 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M18 54 V14 H46 V54"/>
-            <path d="M12 54 H52"/>
-            <path d="M25 22 H30"/>
-            <path d="M34 22 H39"/>
-            <path d="M25 32 H30"/>
-            <path d="M34 32 H39"/>
-            <path d="M25 42 H30"/>
-            <path d="M34 42 H39"/>
-          </svg>
-        </div>
+        <div class="service-icon">管</div>
         <div>
           <span class="service-label">SERVICE III</span>
           <h3>不動産管理</h3>
@@ -545,17 +482,7 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M14 40 H40 L45 50 H18 Z"/>
-            <path d="M18 40 L22 29 H36 L40 40"/>
-            <circle cx="22" cy="50" r="3"/>
-            <circle cx="38" cy="50" r="3"/>
-            <circle cx="48" cy="20" r="10"/>
-            <path d="M44 15 H49 C52 15 54 17 54 20 C54 23 52 25 49 25 H44 Z"/>
-            <path d="M44 15 V30"/>
-          </svg>
-        </div>
+        <div class="service-icon">P</div>
         <div>
           <span class="service-label">SERVICE IV</span>
           <h3>月極駐車場</h3>
@@ -564,16 +491,7 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M10 32 L32 14 L54 32"/>
-            <path d="M18 30 V54 H46 V30"/>
-            <circle cx="45" cy="44" r="10"/>
-            <path d="M45 37 V51"/>
-            <path d="M40 40 L45 45 L50 40"/>
-            <path d="M40 47 H50"/>
-          </svg>
-        </div>
+        <div class="service-icon">却</div>
         <div>
           <span class="service-label">SERVICE V</span>
           <h3>不動産売却相談</h3>
@@ -582,16 +500,7 @@
       </div>
 
       <div class="service-card">
-        <div class="service-icon">
-          <svg viewBox="0 0 64 64">
-            <path d="M10 32 L32 14 L54 32"/>
-            <path d="M18 30 V54 H46 V30"/>
-            <path d="M43 42 L53 52"/>
-            <path d="M50 26 L38 38"/>
-            <path d="M36 36 L28 44"/>
-            <path d="M26 42 L22 46"/>
-          </svg>
-        </div>
+        <div class="service-icon">修</div>
         <div>
           <span class="service-label">SERVICE VI</span>
           <h3>住宅リフォーム</h3>
