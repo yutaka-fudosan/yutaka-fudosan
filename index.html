@@ -11,496 +11,432 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/favicon.png">
 
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:"Noto Sans JP",sans-serif;
+      color:#0b2d5f;
+      line-height:1.8;
+      background:#fbfaf7;
     }
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+    .container{width:92%;max-width:1180px;margin:0 auto}
 
-    html {
-      scroll-behavior: smooth;
+    header{
+      background:#fff;
+      border-bottom:3px solid #0b2d5f;
+      position:sticky;
+      top:0;
+      z-index:1000;
     }
-
-    body {
-      font-family: "Noto Sans JP", sans-serif;
-      color: #0b2d5f;
-      line-height: 1.8;
-      background: #f8f6f1;
+    .header-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:26px;
+      padding:16px 0;
     }
-
-    a {
-      color: inherit;
-      text-decoration: none;
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      white-space:nowrap;
     }
-
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: 0 auto;
+    .logo img{
+      width:70px;
+      height:70px;
+      object-fit:contain;
     }
-
-    header {
-      background: #fff;
-      border-bottom: 3px solid #0b2d5f;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+    .logo-title{
+      font-family:"Noto Serif JP",serif;
+      font-size:30px;
+      font-weight:700;
+      letter-spacing:.06em;
+      line-height:1.25;
     }
-
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 18px 0;
-      gap: 28px;
+    .logo-sub{
+      font-size:13px;
+      letter-spacing:.1em;
+      margin-top:3px;
     }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+      flex-wrap:wrap;
+      justify-content:flex-end;
     }
-
-    .logo img {
-      width: 76px;
-      height: 76px;
-      object-fit: contain;
+    nav a{
+      font-size:14px;
+      font-weight:600;
     }
+    nav a:hover{color:#9b7b3f}
 
-    .logo-title {
-      font-family: "Noto Serif JP", serif;
-      font-size: 31px;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      color: #0b2d5f;
-      line-height: 1.25;
-      white-space: nowrap;
-    }
-
-    .logo-sub {
-      font-size: 14px;
-      color: #0b2d5f;
-      letter-spacing: 0.12em;
-      margin-top: 4px;
-    }
-
-    nav ul {
-      display: flex;
-      list-style: none;
-      gap: 34px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    nav a {
-      font-size: 15px;
-      font-weight: 500;
-      color: #0b2d5f;
-    }
-
-    nav a:hover {
-      color: #9b7b3f;
-    }
-
-    .hero {
-      position: relative;
-      color: #fff;
-      text-align: center;
-      padding: 120px 20px 95px;
+    .hero{
+      text-align:center;
+      color:#fff;
+      padding:120px 20px 95px;
       background:
-        linear-gradient(rgba(8, 37, 82, 0.58), rgba(8, 37, 82, 0.60)),
+        linear-gradient(rgba(8,37,82,.56),rgba(8,37,82,.6)),
         url("hero-kariya.jpg") center center / cover no-repeat;
     }
-
-    .hero h1 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 56px;
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      line-height: 1.5;
-      margin-bottom: 14px;
+    .hero h1{
+      font-family:"Noto Serif JP",serif;
+      font-size:54px;
+      font-weight:500;
+      letter-spacing:.16em;
+      line-height:1.5;
+      margin-bottom:14px;
+      text-shadow:0 2px 8px rgba(0,0,0,.25);
+    }
+    .since{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:18px;
+      color:#d8b46a;
+      font-family:"Noto Serif JP",serif;
+      font-size:20px;
+      letter-spacing:.22em;
+      margin-bottom:22px;
+    }
+    .since::before,.since::after{
+      content:"";
+      width:58px;
+      height:1px;
+      background:#d8b46a;
+    }
+    .hero-copy{
+      font-size:19px;
+      font-weight:500;
+      letter-spacing:.08em;
+      line-height:2;
+      margin-bottom:34px;
     }
 
-    .since {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 18px;
-      color: #d8b46a;
-      font-family: "Noto Serif JP", serif;
-      font-size: 20px;
-      letter-spacing: 0.22em;
-      margin-bottom: 22px;
+    .hero-buttons,.service-buttons,.contact-buttons{
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .btn-main{
+      display:inline-block;
+      min-width:310px;
+      padding:17px 34px;
+      background:rgba(5,37,86,.88);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.75);
+      border-radius:3px;
+      font-size:16px;
+      font-weight:700;
+      transition:.25s;
+    }
+    .btn-main:hover{
+      background:#0b2d5f;
+      transform:translateY(-2px);
     }
 
-    .since::before,
-    .since::after {
-      content: "";
-      width: 58px;
-      height: 1px;
-      background: #d8b46a;
+    section{padding:70px 0}
+    .section-title{
+      text-align:center;
+      margin-bottom:38px;
+    }
+    .section-title h2{
+      font-family:"Noto Serif JP",serif;
+      font-size:32px;
+      font-weight:700;
+      letter-spacing:.12em;
+      display:inline-flex;
+      align-items:center;
+      gap:18px;
+    }
+    .section-title h2::before,.section-title h2::after{
+      content:"";
+      width:44px;
+      height:1px;
+      background:#c7a45b;
+    }
+    .section-title p{
+      margin-top:12px;
+      font-size:15px;
     }
 
-    .hero-copy {
-      font-size: 20px;
-      font-weight: 500;
-      letter-spacing: 0.08em;
-      line-height: 2;
-      margin-bottom: 34px;
+    .services{background:#fbfaf7}
+    .service-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+    .service-card{
+      background:#fff;
+      border:1px solid #d8c7aa;
+      padding:32px 28px;
+      min-height:205px;
+      display:grid;
+      grid-template-columns:82px 1fr;
+      gap:22px;
+      align-items:center;
+      box-shadow:0 8px 20px rgba(0,0,0,.04);
+    }
+    .service-icon{
+      width:76px;
+      height:76px;
+      border-radius:50%;
+      background:#f1eadf;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .service-icon svg{
+      width:48px;
+      height:48px;
+      stroke:#0b2d5f;
+      stroke-width:2.5;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+    }
+    .service-label{
+      font-family:"Noto Serif JP",serif;
+      font-size:13px;
+      color:#9b7b3f;
+      letter-spacing:.18em;
+      margin-bottom:6px;
+      display:block;
+    }
+    .service-card h3{
+      font-family:"Noto Serif JP",serif;
+      font-size:25px;
+      line-height:1.35;
+      margin-bottom:8px;
+    }
+    .service-card p{
+      color:#333;
+      font-size:14px;
+      line-height:1.9;
+    }
+    .service-buttons{
+      margin-top:28px;
+    }
+    .service-buttons .btn-main{
+      background:#0b2d5f;
+      border-color:#0b2d5f;
     }
 
-    .hero-buttons,
-    .service-buttons,
-    .contact-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
+    .contact-area{
+      background:linear-gradient(135deg,#062754,#0b3c7b);
+      color:#fff;
+      padding:48px 0;
+    }
+    .contact-layout{
+      display:grid;
+      grid-template-columns:1.4fr .9fr;
+      gap:34px;
+      align-items:center;
+    }
+    .contact-area h2{
+      font-family:"Noto Serif JP",serif;
+      font-size:30px;
+      font-weight:500;
+      letter-spacing:.08em;
+      margin-bottom:14px;
+    }
+    .contact-area p{
+      color:rgba(255,255,255,.92);
+      margin-bottom:24px;
+    }
+    .btn-contact{
+      display:inline-block;
+      padding:13px 22px;
+      border-radius:3px;
+      font-size:14px;
+      font-weight:700;
+      color:#fff;
+    }
+    .tel{background:#0b2d5f;border:1px solid rgba(255,255,255,.4)}
+    .line{background:#06c755}
+    .insta{background:linear-gradient(45deg,#f09433,#dc2743,#bc1888)}
+    .mail{background:#fff;color:#0b2d5f}
+
+    .qr-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+    .qr-card{
+      border:1px solid rgba(255,255,255,.45);
+      text-align:center;
+      padding:18px;
+      background:rgba(255,255,255,.05);
+    }
+    .qr-card h3{
+      font-family:"Noto Serif JP",serif;
+      font-size:16px;
+      margin-bottom:10px;
+    }
+    .qr-card img{
+      width:140px;
+      background:#fff;
+      padding:6px;
+      margin:0 auto 8px;
+    }
+    .qr-card p{
+      font-size:12px;
+      margin:0;
     }
 
-    .btn-main {
-      min-width: 320px;
-      padding: 18px 34px;
-      border: 1px solid rgba(255,255,255,0.8);
-      background: rgba(5, 37, 86, 0.86);
-      color: #fff;
-      font-size: 17px;
-      font-weight: 700;
-      border-radius: 3px;
-      transition: 0.25s;
+    .info-section{background:#fbfaf7}
+    .info-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:36px;
+    }
+    .info-box h2{
+      font-family:"Noto Serif JP",serif;
+      font-size:23px;
+      margin-bottom:18px;
+      padding-bottom:10px;
+      border-bottom:1px solid #d8c7aa;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+      border:1px solid #e1d4bf;
+    }
+    th,td{
+      padding:12px 14px;
+      border-bottom:1px solid #eee5d8;
+      text-align:left;
+      font-size:14px;
+      vertical-align:top;
+    }
+    th{
+      width:125px;
+      background:#fbfaf7;
+    }
+    td ul{padding-left:18px}
+    .map-frame iframe{
+      width:100%;
+      height:285px;
+      border:1px solid #e1d4bf;
+      display:block;
+      margin:12px 0;
     }
 
-    .btn-main:hover {
-      background: #0b2d5f;
-      transform: translateY(-2px);
+    footer{
+      background:#062754;
+      color:#fff;
+      padding:28px 0;
+      font-size:13px;
     }
-
-    section {
-      padding: 70px 0;
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
     }
+    footer a{margin-right:18px}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 38px;
-    }
-
-    .section-title h2 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: #0b2d5f;
-      letter-spacing: 0.12em;
-      display: inline-flex;
-      align-items: center;
-      gap: 18px;
-    }
-
-    .section-title h2::before,
-    .section-title h2::after {
-      content: "";
-      width: 44px;
-      height: 1px;
-      background: #c7a45b;
-    }
-
-    .section-title p {
-      margin-top: 12px;
-      color: #0b2d5f;
-      font-size: 15px;
-    }
-
-    .services {
-      background: #fbfaf7;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
-    }
-
-    .service-card {
-      background: #fff;
-      border: 1px solid #d8c7aa;
-      padding: 32px 28px;
-      min-height: 205px;
-      display: grid;
-      grid-template-columns: 88px 1fr;
-      gap: 20px;
-      align-items: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
-    }
-
-    .service-icon {
-      width: 76px;
-      height: 76px;
-      border-radius: 50%;
-      background: #f1eadf;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .service-icon svg {
-      width: 48px;
-      height: 48px;
-      stroke: #0b2d5f;
-      stroke-width: 2.4;
-      fill: none;
-      stroke-linecap: round;
-      stroke-linejoin: round;
-    }
-
-    .service-label {
-      font-family: "Noto Serif JP", serif;
-      font-size: 13px;
-      color: #9b7b3f;
-      letter-spacing: 0.18em;
-      margin-bottom: 6px;
-      display: block;
-    }
-
-    .service-card h3 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 25px;
-      color: #0b2d5f;
-      margin-bottom: 8px;
-      line-height: 1.35;
-    }
-
-    .service-card p {
-      font-size: 14px;
-      color: #333;
-      line-height: 1.9;
-    }
-
-    .service-buttons {
-      margin-top: 28px;
-    }
-
-    .service-buttons .btn-main {
-      background: #0b2d5f;
-      border-color: #0b2d5f;
-      min-width: 300px;
-    }
-
-    .contact-area {
-      background: linear-gradient(135deg, #062754, #0b3c7b);
-      color: #fff;
-      padding: 48px 0;
-    }
-
-    .contact-layout {
-      display: grid;
-      grid-template-columns: 1.4fr 0.9fr;
-      gap: 34px;
-      align-items: center;
-    }
-
-    .contact-area h2 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 31px;
-      font-weight: 500;
-      margin-bottom: 14px;
-      letter-spacing: 0.08em;
-    }
-
-    .contact-area p {
-      margin-bottom: 24px;
-      color: rgba(255,255,255,0.92);
-    }
-
-    .btn-contact {
-      display: inline-block;
-      padding: 13px 22px;
-      border-radius: 3px;
-      font-weight: 700;
-      font-size: 14px;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.4);
-    }
-
-    .tel { background: #0b2d5f; }
-    .line { background: #06c755; border: none; }
-    .insta { background: linear-gradient(45deg,#f09433,#dc2743,#bc1888); border: none; }
-    .mail { background: #fff; color: #0b2d5f; border: none; }
-
-    .qr-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .qr-card {
-      border: 1px solid rgba(255,255,255,0.45);
-      text-align: center;
-      padding: 18px;
-      background: rgba(255,255,255,0.05);
-    }
-
-    .qr-card h3 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .qr-card img {
-      width: 140px;
-      background: #fff;
-      padding: 6px;
-      margin: 0 auto 8px;
-    }
-
-    .qr-card p {
-      font-size: 12px;
-      margin: 0;
-    }
-
-    .info-section {
-      background: #fbfaf7;
-    }
-
-    .info-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-    }
-
-    .info-box h2 {
-      font-family: "Noto Serif JP", serif;
-      font-size: 23px;
-      margin-bottom: 18px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #d8c7aa;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #fff;
-      border: 1px solid #e1d4bf;
-    }
-
-    th, td {
-      padding: 12px 14px;
-      border-bottom: 1px solid #eee5d8;
-      text-align: left;
-      font-size: 14px;
-      vertical-align: top;
-    }
-
-    th {
-      width: 125px;
-      color: #0b2d5f;
-      background: #fbfaf7;
-    }
-
-    td ul {
-      padding-left: 18px;
-    }
-
-    .map-frame iframe {
-      width: 100%;
-      height: 285px;
-      border: 1px solid #e1d4bf;
-      display: block;
-    }
-
-    footer {
-      background: #062754;
-      color: #fff;
-      padding: 28px 0;
-      font-size: 13px;
-    }
-
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    footer a {
-      margin-right: 20px;
-    }
-
-    @media (max-width: 900px) {
-      .header-inner,
+    @media(max-width:900px){
+      .header-inner{
+        display:block;
+      }
+      nav ul{
+        margin-top:18px;
+        justify-content:flex-start;
+        gap:24px;
+      }
+      .service-grid,
       .contact-layout,
-      .info-grid {
-        display: block;
+      .info-grid{
+        grid-template-columns:1fr;
       }
-
-      nav ul {
-        margin-top: 16px;
-        justify-content: flex-start;
-        gap: 18px;
-      }
-
-      .service-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .contact-layout > div:first-child {
-        margin-bottom: 28px;
+      .hero h1{
+        font-size:38px;
       }
     }
 
-    @media (max-width: 640px) {
-      .logo img {
-        width: 54px;
-        height: 54px;
+    @media(max-width:640px){
+      .container{width:92%}
+      .logo{
+        align-items:center;
+      }
+      .logo img{
+        width:58px;
+        height:58px;
+      }
+      .logo-title{
+        font-size:24px;
+      }
+      .logo-sub{
+        font-size:12px;
+        letter-spacing:.05em;
+      }
+      nav ul{
+        gap:22px;
+      }
+      nav a{
+        font-size:22px;
       }
 
-      .logo-title {
-        font-size: 22px;
+      .hero{
+        padding:86px 16px 70px;
+      }
+      .hero h1{
+        font-size:30px;
+        letter-spacing:.08em;
+      }
+      .since{
+        font-size:15px;
+      }
+      .hero-copy{
+        font-size:15px;
+      }
+      .btn-main{
+        min-width:100%;
       }
 
-      .logo-sub {
-        font-size: 11px;
+      section{padding:56px 0}
+      .section-title h2{
+        font-size:28px;
       }
 
-      .hero {
-        padding: 88px 16px 72px;
+      .service-card{
+        grid-template-columns:72px 1fr;
+        gap:18px;
+        padding:28px 22px;
+        min-height:auto;
+      }
+      .service-icon{
+        width:66px;
+        height:66px;
+      }
+      .service-icon svg{
+        width:40px;
+        height:40px;
+      }
+      .service-card h3{
+        font-size:29px;
+      }
+      .service-card p{
+        font-size:16px;
       }
 
-      .hero h1 {
-        font-size: 30px;
-        letter-spacing: 0.08em;
+      .qr-grid{
+        grid-template-columns:1fr;
       }
-
-      .hero-copy {
-        font-size: 15px;
+      .footer-inner{
+        display:block;
       }
-
-      .btn-main {
-        min-width: 100%;
-      }
-
-      .service-card {
-        grid-template-columns: 72px 1fr;
-        padding: 24px 20px;
-      }
-
-      .service-icon {
-        width: 64px;
-        height: 64px;
-      }
-
-      .service-icon svg {
-        width: 40px;
-        height: 40px;
-      }
-
-      .qr-grid {
-        grid-template-columns: 1fr;
+      footer a{
+        display:inline-block;
+        margin-bottom:8px;
       }
     }
   </style>
@@ -558,7 +494,13 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M10 30 L32 12 L54 30"/><path d="M16 28 V54 H48 V28"/><path d="M25 54 V38 H39 V54"/><path d="M22 31 H29"/><path d="M35 31 H42"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M10 30 L32 12 L54 30"/>
+            <path d="M16 28 V54 H48 V28"/>
+            <path d="M25 54 V38 H39 V54"/>
+            <path d="M22 31 H29"/>
+            <path d="M35 31 H42"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE I</span>
@@ -569,7 +511,11 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M10 32 L32 14 L54 32"/><path d="M18 30 V54 H46 V30"/><path d="M28 54 V40 H36 V54"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M10 32 L32 14 L54 32"/>
+            <path d="M18 30 V54 H46 V30"/>
+            <path d="M28 54 V40 H36 V54"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE II</span>
@@ -580,7 +526,16 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M18 54 V14 H46 V54"/><path d="M12 54 H52"/><path d="M25 22 H30"/><path d="M34 22 H39"/><path d="M25 32 H30"/><path d="M34 32 H39"/><path d="M25 42 H30"/><path d="M34 42 H39"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M18 54 V14 H46 V54"/>
+            <path d="M12 54 H52"/>
+            <path d="M25 22 H30"/>
+            <path d="M34 22 H39"/>
+            <path d="M25 32 H30"/>
+            <path d="M34 32 H39"/>
+            <path d="M25 42 H30"/>
+            <path d="M34 42 H39"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE III</span>
@@ -591,7 +546,15 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M14 39 H38 L43 48 H17 Z"/><path d="M18 39 L22 28 H34 L38 39"/><circle cx="21" cy="49" r="3"/><circle cx="37" cy="49" r="3"/><circle cx="47" cy="20" r="10"/><path d="M47 15 V25"/><path d="M43 15 H49"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M14 40 H40 L45 50 H18 Z"/>
+            <path d="M18 40 L22 29 H36 L40 40"/>
+            <circle cx="22" cy="50" r="3"/>
+            <circle cx="38" cy="50" r="3"/>
+            <circle cx="48" cy="20" r="10"/>
+            <path d="M44 15 H49 C52 15 54 17 54 20 C54 23 52 25 49 25 H44 Z"/>
+            <path d="M44 15 V30"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE IV</span>
@@ -602,7 +565,14 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M10 32 L32 14 L54 32"/><path d="M18 30 V54 H46 V30"/><circle cx="45" cy="44" r="10"/><path d="M45 36 V52"/><path d="M39 40 L45 46 L51 40"/><path d="M39 47 H51"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M10 32 L32 14 L54 32"/>
+            <path d="M18 30 V54 H46 V30"/>
+            <circle cx="45" cy="44" r="10"/>
+            <path d="M45 37 V51"/>
+            <path d="M40 40 L45 45 L50 40"/>
+            <path d="M40 47 H50"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE V</span>
@@ -613,7 +583,14 @@
 
       <div class="service-card">
         <div class="service-icon">
-          <svg viewBox="0 0 64 64"><path d="M10 32 L32 14 L54 32"/><path d="M18 30 V54 H46 V30"/><path d="M43 42 L53 52"/><path d="M50 26 L38 38"/><path d="M36 36 L28 44"/><path d="M26 42 L22 46"/></svg>
+          <svg viewBox="0 0 64 64">
+            <path d="M10 32 L32 14 L54 32"/>
+            <path d="M18 30 V54 H46 V30"/>
+            <path d="M43 42 L53 52"/>
+            <path d="M50 26 L38 38"/>
+            <path d="M36 36 L28 44"/>
+            <path d="M26 42 L22 46"/>
+          </svg>
         </div>
         <div>
           <span class="service-label">SERVICE VI</span>
@@ -698,6 +675,7 @@
     <div class="info-box" id="access">
       <h2>アクセス</h2>
       <p>愛知県刈谷市新栄町7丁目61番地</p>
+
       <div class="map-frame">
         <iframe
           src="https://maps.google.com/maps?q=%E6%84%9B%E7%9F%A5%E7%9C%8C%E5%88%88%E8%B0%B7%E5%B8%82%E6%96%B0%E6%A0%84%E7%94%BA7%E4%B8%81%E7%9B%AE61%E7%95%AA%E5%9C%B0&z=16&output=embed"
@@ -705,7 +683,9 @@
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
       </div>
-      <p>【営業時間】10:00〜19:00　【定休日】日曜日・年末年始・不定休</p>
+
+      <p>【営業時間】10:00〜19:00</p>
+      <p>【定休日】日曜日・年末年始・不定休</p>
     </div>
 
   </div>
@@ -714,7 +694,6 @@
 <footer>
   <div class="container footer-inner">
     <div>
-      <a href="#about">会社案内</a>
       <a href="#services">事業内容</a>
       <a href="#company">会社概要</a>
       <a href="#access">アクセス</a>
