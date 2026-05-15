@@ -1,8 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>刈谷市の不動産売却相談｜株式会社ユタカ不動産</title>
+
+<meta name="description" content="刈谷市で不動産売却をご検討の方へ。昭和51年創業・地域密着の株式会社ユタカ不動産が、土地・戸建・マンション・空き家などの売却相談を丁寧にサポートいたします。">
+
+<link rel="icon" href="favicon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+
+  font-family:
+  "Noto Sans JP",
+  sans-serif;
+
+  background:#f8f6f2;
+
+  color:#333;
+
+  line-height:1.8;
+
+}
+
+a{
+  text-decoration:none;
+}
+
+img{
+  max-width:100%;
+}
+
 /* =========================
-   HERO 完全版
+   HEADER
+========================= */
+
+header{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  background:#fff;
+
+  z-index:9999;
+
+  border-bottom:
+  1px solid #ddd;
+
+}
+
+.header-inner{
+
+  width:92%;
+  max-width:1280px;
+
+  margin:0 auto;
+
+  padding:
+    18px 0;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+}
+
+.logo{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+}
+
+.logo img{
+
+  width:72px;
+
+}
+
+.logo-text h1{
+
+  font-family:
+  "Zen Maru Gothic",
+  sans-serif;
+
+  color:#163b7a;
+
+  font-size:42px;
+
+  line-height:1.2;
+
+}
+
+.logo-text p{
+
+  color:#555;
+
+  font-size:14px;
+
+  margin-top:4px;
+
+}
+
+nav{
+
+  display:flex;
+
+  gap:38px;
+
+}
+
+nav a{
+
+  color:#222;
+
+  font-size:16px;
+
+  font-weight:500;
+
+}
+
+/* =========================
+   HERO
 ========================= */
 
 .baikyaku-hero{
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  margin-top:110px;
 
   position:relative;
 
@@ -10,18 +170,12 @@
 
   color:#fff;
 
-  min-height:720px;
-
-  display:flex;
-
-  align-items:center;
-
   background:
     linear-gradient(
       90deg,
       rgba(6,32,72,.92) 0%,
       rgba(6,32,72,.78) 42%,
-      rgba(6,32,72,.28) 100%
+      rgba(6,32,72,.25) 100%
     ),
     url("hero-baikyaku.jpg")
     center center / cover no-repeat;
@@ -30,19 +184,14 @@
 
 .baikyaku-inner{
 
-  position:relative;
-
-  z-index:2;
-
   width:92%;
-  max-width:1180px;
+  max-width:1200px;
 
   margin:0 auto;
 
-  padding:
-    120px
-    0
-    110px;
+  position:relative;
+
+  z-index:2;
 
 }
 
@@ -51,36 +200,26 @@
   font-size:42px;
 
   font-family:
-    "Noto Serif JP",
-    serif;
+  "Noto Serif JP",
+  serif;
 
-  margin-bottom:8px;
+  margin-bottom:12px;
 
   letter-spacing:.08em;
 
-  text-shadow:
-    0 2px 12px rgba(0,0,0,.28);
-
 }
 
-.baikyaku-inner h1{
+.baikyaku-inner h2{
 
-  font-size:78px;
+  font-size:82px;
 
   line-height:1.2;
 
-  margin-bottom:26px;
+  margin-bottom:30px;
 
   font-family:
-    "Noto Serif JP",
-    serif;
-
-  font-weight:700;
-
-  letter-spacing:.06em;
-
-  text-shadow:
-    0 4px 18px rgba(0,0,0,.30);
+  "Noto Serif JP",
+  serif;
 
 }
 
@@ -94,21 +233,21 @@
 
   color:#d7b36d;
 
+  margin-bottom:36px;
+
   font-size:22px;
 
   letter-spacing:.18em;
 
-  margin-bottom:34px;
-
   font-family:
-    "Noto Serif JP",
-    serif;
+  "Noto Serif JP",
+  serif;
 
 }
 
 .baikyaku-since span{
 
-  width:90px;
+  width:80px;
   height:1px;
 
   background:#d7b36d;
@@ -117,17 +256,11 @@
 
 .baikyaku-copy{
 
-  font-size:22px;
+  font-size:24px;
 
-  line-height:2.1;
+  line-height:2.2;
 
-  margin-bottom:48px;
-
-  color:
-  rgba(255,255,255,.95);
-
-  text-shadow:
-    0 2px 10px rgba(0,0,0,.22);
+  margin-bottom:52px;
 
 }
 
@@ -150,8 +283,7 @@
   gap:14px;
 
   padding:
-    18px
-    24px;
+    18px 24px;
 
   border-radius:999px;
 
@@ -161,27 +293,23 @@
     rgba(255,255,255,.10);
 
   border:
-    1px solid
-    rgba(255,255,255,.18);
-
-  box-shadow:
-    0 8px 30px rgba(0,0,0,.12);
+    1px solid rgba(255,255,255,.20);
 
 }
 
 .point-card i{
 
-  font-size:26px;
-
   color:#d7b36d;
+
+  font-size:24px;
 
 }
 
 .point-card span{
 
-  line-height:1.6;
-
   font-size:15px;
+
+  line-height:1.6;
 
 }
 
@@ -192,20 +320,28 @@
 .baikyaku-about{
 
   padding:
-    90px
-    0;
+    100px 0;
 
   background:
     linear-gradient(
-      rgba(248,246,242,.95),
-      rgba(248,246,242,.95)
+      rgba(248,246,242,.96),
+      rgba(248,246,242,.96)
     ),
     url("sell-consultation.jpg")
     right bottom / 42% auto no-repeat;
 
 }
 
-.baikyaku-title{
+.container{
+
+  width:92%;
+  max-width:1200px;
+
+  margin:0 auto;
+
+}
+
+.section-title{
 
   display:flex;
 
@@ -213,13 +349,13 @@
 
   justify-content:center;
 
-  gap:24px;
+  gap:22px;
 
-  margin-bottom:48px;
+  margin-bottom:50px;
 
 }
 
-.baikyaku-title span{
+.section-title span{
 
   width:70px;
   height:1px;
@@ -228,27 +364,24 @@
 
 }
 
-.baikyaku-title h2{
+.section-title h3{
 
   font-size:42px;
 
   color:#163b7a;
 
   font-family:
-    "Noto Serif JP",
-    serif;
-
-  letter-spacing:.08em;
+  "Noto Serif JP",
+  serif;
 
 }
 
-.baikyaku-text{
+.about-text{
 
-  max-width:900px;
+  max-width:880px;
 
   margin:
-    0 auto
-    54px;
+    0 auto 60px;
 
   font-size:22px;
 
@@ -258,13 +391,12 @@
 
 }
 
-.baikyaku-checks{
+.check-list{
 
   max-width:820px;
 
   margin:
-    0 auto
-    56px;
+    0 auto 60px;
 
   display:flex;
 
@@ -278,11 +410,10 @@
 
   background:#fff;
 
-  padding:
-    22px
-    28px;
-
   border-radius:14px;
+
+  padding:
+    22px 28px;
 
   display:flex;
 
@@ -303,11 +434,13 @@
 
   color:#c8aa68;
 
-  font-size:24px;
-
 }
 
-.baikyaku-btn{
+/* =========================
+   BUTTON
+========================= */
+
+.tel-btn{
 
   max-width:760px;
 
@@ -322,11 +455,10 @@
 
   color:#fff;
 
-  padding:
-    26px
-    36px;
-
   border-radius:999px;
+
+  padding:
+    26px 36px;
 
   display:flex;
 
@@ -334,29 +466,15 @@
 
   justify-content:space-between;
 
-  gap:20px;
-
-  transition:.25s;
-
-  box-shadow:
-    0 12px 30px rgba(22,59,122,.22);
-
 }
 
-.baikyaku-btn:hover{
-
-  transform:
-    translateY(-3px);
-
-}
-
-.baikyaku-btn i{
+.tel-btn i{
 
   font-size:42px;
 
 }
 
-.baikyaku-btn small{
+.tel-btn small{
 
   display:block;
 
@@ -368,17 +486,17 @@
 
 }
 
-.baikyaku-btn strong{
+.tel-btn strong{
 
-  font-size:40px;
+  font-size:42px;
 
   font-family:
-    "Noto Serif JP",
-    serif;
+  "Noto Serif JP",
+  serif;
 
 }
 
-.baikyaku-btn span{
+.tel-btn span{
 
   font-size:42px;
 
@@ -388,17 +506,55 @@
    MOBILE
 ========================= */
 
-@media(max-width:640px){
+@media(max-width:768px){
+
+  .header-inner{
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:16px;
+
+  }
+
+  nav{
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+  }
+
+  .logo img{
+
+    width:54px;
+
+  }
+
+  .logo-text h1{
+
+    font-size:24px;
+
+  }
+
+  .logo-text p{
+
+    font-size:11px;
+
+  }
 
   .baikyaku-hero{
 
     min-height:auto;
 
+    margin-top:130px;
+
     background:
       linear-gradient(
         180deg,
         rgba(6,32,72,.88),
-        rgba(6,32,72,.65)
+        rgba(6,32,72,.66)
       ),
       url("hero-baikyaku.jpg")
       center center / cover no-repeat;
@@ -408,9 +564,7 @@
   .baikyaku-inner{
 
     padding:
-      92px
-      0
-      72px;
+      80px 0 70px;
 
   }
 
@@ -420,13 +574,11 @@
 
   }
 
-  .baikyaku-inner h1{
+  .baikyaku-inner h2{
 
     font-size:54px;
 
-    margin-bottom:20px;
-
-    line-height:1.3;
+    margin-bottom:24px;
 
   }
 
@@ -436,13 +588,11 @@
 
     gap:10px;
 
-    margin-bottom:24px;
-
   }
 
   .baikyaku-since span{
 
-    width:30px;
+    width:26px;
 
   }
 
@@ -451,8 +601,6 @@
     font-size:17px;
 
     line-height:2;
-
-    margin-bottom:34px;
 
   }
 
@@ -466,50 +614,36 @@
 
     width:100%;
 
-    border-radius:18px;
+    border-radius:20px;
 
   }
 
   .baikyaku-about{
 
-    background:
-      #f8f6f2;
+    background:#f8f6f2;
 
     padding:
-      58px
-      0;
+      60px 0;
 
   }
 
-  .baikyaku-title{
+  .section-title h3{
 
-    gap:12px;
-
-    margin-bottom:30px;
+    font-size:28px;
 
   }
 
-  .baikyaku-title span{
+  .section-title span{
 
     width:24px;
 
   }
 
-  .baikyaku-title h2{
-
-    font-size:26px;
-
-    line-height:1.5;
-
-  }
-
-  .baikyaku-text{
+  .about-text{
 
     font-size:16px;
 
     line-height:2.2;
-
-    margin-bottom:36px;
 
   }
 
@@ -520,43 +654,249 @@
     line-height:1.8;
 
     padding:
-      16px
-      18px;
+      16px 18px;
 
   }
 
-  .baikyaku-btn{
+  .tel-btn{
 
     padding:
-      20px
-      22px;
+      20px 24px;
 
-    border-radius:26px;
+    border-radius:24px;
 
   }
 
-  .baikyaku-btn i{
+  .tel-btn i{
 
     font-size:28px;
 
   }
 
-  .baikyaku-btn small{
-
-    font-size:11px;
-
-  }
-
-  .baikyaku-btn strong{
+  .tel-btn strong{
 
     font-size:28px;
 
   }
 
-  .baikyaku-btn span{
+  .tel-btn span{
 
-    font-size:26px;
+    font-size:24px;
 
   }
 
 }
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-inner">
+
+    <div class="logo">
+
+      <img src="favicon.png">
+
+      <div class="logo-text">
+
+        <h1>株式会社ユタカ不動産</h1>
+
+        <p>
+          昭和51年創業　
+          刈谷市密着の不動産会社
+        </p>
+
+      </div>
+
+    </div>
+
+    <nav>
+
+      <a href="index.html">TOP</a>
+      <a href="#">会社案内</a>
+      <a href="#">事業内容</a>
+      <a href="#">アクセス</a>
+      <a href="#">お問い合わせ</a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<section class="baikyaku-hero">
+
+  <div class="baikyaku-inner">
+
+    <div class="baikyaku-top">
+      刈谷市の
+    </div>
+
+    <h2>
+      不動産売却相談
+    </h2>
+
+    <div class="baikyaku-since">
+
+      <span></span>
+
+      SINCE 1976
+
+      <span></span>
+
+    </div>
+
+    <div class="baikyaku-copy">
+
+      昭和51年創業・地域密着。<br>
+
+      土地・戸建・マンション・空き家など、<br>
+
+      不動産売却のご相談を丁寧にサポートいたします。
+
+    </div>
+
+    <div class="baikyaku-points">
+
+      <div class="point-card">
+
+        <i class="fa-solid fa-handshake"></i>
+
+        <span>
+          地域密着の<br>
+          安心対応
+        </span>
+
+      </div>
+
+      <div class="point-card">
+
+        <i class="fa-solid fa-house"></i>
+
+        <span>
+          あらゆる不動産<br>
+          売却に対応
+        </span>
+
+      </div>
+
+      <div class="point-card">
+
+        <i class="fa-solid fa-file-circle-check"></i>
+
+        <span>
+          適正査定・<br>
+          丁寧なご提案
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="baikyaku-about">
+
+  <div class="container">
+
+    <div class="section-title">
+
+      <span></span>
+
+      <h3>
+        不動産売却をご検討の方へ
+      </h3>
+
+      <span></span>
+
+    </div>
+
+    <div class="about-text">
+
+      株式会社ユタカ不動産では、刈谷市を中心に
+      不動産売却のご相談を承っております。<br><br>
+
+      相続した不動産、空き家、住み替えによる売却、
+      資産整理など、お客様のご事情に合わせて
+      ご提案いたします。
+
+    </div>
+
+    <div class="check-list">
+
+      <div class="check-item">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        土地・戸建・マンションの売却相談
+
+      </div>
+
+      <div class="check-item">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        空き家・相続不動産のご相談
+
+      </div>
+
+      <div class="check-item">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        不動産査定のご相談
+
+      </div>
+
+      <div class="check-item">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        地域密着ならではの情報力
+
+      </div>
+
+      <div class="check-item">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        昭和51年創業の安心感
+
+      </div>
+
+    </div>
+
+    <a href="tel:0566217620" class="tel-btn">
+
+      <i class="fa-solid fa-phone"></i>
+
+      <div>
+
+        <small>
+          まずはお気軽にご相談ください
+        </small>
+
+        <strong>
+          お電話で相談する
+        </strong>
+
+      </div>
+
+      <span>
+        ›
+      </span>
+
+    </a>
+
+  </div>
+
+</section>
+
+</body>
+</html>
