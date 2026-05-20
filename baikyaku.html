@@ -1,184 +1,132 @@
-<!-- =========================
-HEADER 全部これに置き換え
-========================= -->
+<div class="logo">
 
-<header>
+  <img src="favicon.png" alt="株式会社ユタカ不動産ロゴ">
 
-  <div class="header-inner">
+  <div class="logo-text">
 
-    <a href="index.html" class="logo">
+    <h1>株式会社ユタカ不動産</h1>
 
-      <img src="favicon.png" alt="株式会社ユタカ不動産ロゴ">
-
-      <div class="logo-text">
-
-        <h1>株式会社ユタカ不動産</h1>
-
-        <p>昭和51年創業　刈谷市密着の不動産会社</p>
-
-      </div>
-
-    </a>
-
-    <nav>
-
-      <a href="index.html">TOP</a>
-      <a href="index.html#company">会社案内</a>
-      <a href="index.html#services">事業内容</a>
-      <a href="index.html#access">アクセス</a>
-      <a href="index.html#contact">お問い合わせ</a>
-
-    </nav>
+    <p>昭和51年創業　刈谷市密着の不動産会社</p>
 
   </div>
 
-</header>
+</div>
 
+<nav>
 
+  <a href="index.html">TOP</a>
+  <a href="index.html#company">会社案内</a>
+  <a href="index.html#services">事業内容</a>
+  <a href="index.html#access">アクセス</a>
+  <a href="index.html#contact">お問い合わせ</a>
 
-<!-- =========================
-CSS の HEADER 部分をこれに置き換え
-========================= -->
+</nav>
 
-<style>
+<div class="baikyaku-top">刈谷市の</div>
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+<h2>不動産売却相談</h2>
 
-body{
-  font-family:"Noto Sans JP",sans-serif;
-  background:#f8f6f2;
-  color:#333;
-  line-height:1.8;
-}
+<div class="baikyaku-since">
 
-a{
-  text-decoration:none;
-  color:inherit;
-}
+  <span></span>
+  SINCE 1976
+  <span></span>
 
-img{
-  max-width:100%;
-  display:block;
-}
+</div>
 
-/* =========================
-   HEADER
-========================= */
+<div class="baikyaku-copy">
 
-header{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  background:#fff;
-  z-index:9999;
-  border-bottom:3px solid #0b2d5f;
-}
+  昭和51年創業・地域密着。<br>
+  土地・戸建・マンション・空き家など、<br>
+  不動産売却のご相談を丁寧にサポートいたします。
 
-.header-inner{
-  width:92%;
-  max-width:1180px;
-  margin:0 auto;
-  padding:16px 0;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:26px;
-}
+</div>
 
-.logo{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  white-space:nowrap;
-}
+<div class="baikyaku-points">
 
-.logo img{
-  width:70px;
-  height:70px;
-  object-fit:contain;
-}
+  <div class="point-card">
+    <i class="fa-solid fa-handshake"></i>
+    <span>地域密着の<br>安心対応</span>
+  </div>
 
-.logo-text h1{
-  font-family:"Zen Maru Gothic",sans-serif;
-  font-size:30px;
-  font-weight:700;
-  letter-spacing:.03em;
-  line-height:1.25;
-  color:#0b2d5f;
-}
+  <div class="point-card">
+    <i class="fa-solid fa-house"></i>
+    <span>あらゆる不動産<br>売却に対応</span>
+  </div>
 
-.logo-text p{
-  font-size:13px;
-  letter-spacing:.08em;
-  margin-top:3px;
-  color:#555;
-}
+  <div class="point-card">
+    <i class="fa-solid fa-file-circle-check"></i>
+    <span>適正査定・<br>丁寧なご提案</span>
+  </div>
 
-nav{
-  display:flex;
-  gap:30px;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-}
+</div>
 
-nav a{
-  color:#222;
-  font-size:14px;
-  font-weight:600;
-  transition:.2s;
-}
+<div class="section-title">
 
-nav a:hover{
-  color:#9b7b3f;
-}
+  <span></span>
 
-/* =========================
-   MOBILE
-========================= */
+  <h3>不動産売却をご検討の方へ</h3>
 
-@media(max-width:768px){
+  <span></span>
 
-  .header-inner{
-    display:block;
-  }
+</div>
 
-  .logo{
-    gap:12px;
-    margin-bottom:14px;
-  }
+<div class="about-text">
 
-  .logo img{
-    width:52px;
-    height:52px;
-  }
+  株式会社ユタカ不動産では、刈谷市を中心に
+  不動産売却のご相談を承っております。<br><br>
 
-  .logo-text h1{
-    font-size:21px;
-    line-height:1.35;
-    letter-spacing:.02em;
-  }
+  相続した不動産、空き家、住み替えによる売却、
+  資産整理など、お客様のご事情に合わせて
+  ご提案いたします。
 
-  .logo-text p{
-    font-size:11px;
-    letter-spacing:.03em;
-  }
+</div>
 
-  nav{
-    margin-top:18px;
-    gap:16px;
-    justify-content:flex-start;
-    flex-wrap:wrap;
-  }
+<div class="check-list">
 
-  nav a{
-    font-size:14px;
-  }
+  <div class="check-item">
+    <i class="fa-solid fa-check"></i>
+    <span>土地・戸建・マンションの売却相談</span>
+  </div>
 
-}
+  <div class="check-item">
+    <i class="fa-solid fa-check"></i>
+    <span>空き家・相続不動産のご相談</span>
+  </div>
 
-</style>
+  <div class="check-item">
+    <i class="fa-solid fa-check"></i>
+    <span>不動産査定のご相談</span>
+  </div>
+
+  <div class="check-item">
+    <i class="fa-solid fa-check"></i>
+    <span>地域密着ならではの情報力</span>
+  </div>
+
+  <div class="check-item">
+    <i class="fa-solid fa-check"></i>
+    <span>昭和51年創業の安心感</span>
+  </div>
+
+</div>
+
+<a href="tel:0566217620" class="tel-btn">
+
+  <i class="fa-solid fa-phone"></i>
+
+  <div>
+
+    <small>まずはお気軽にご相談ください</small>
+
+    <strong>お電話で相談する</strong>
+
+  </div>
+
+  <span>›</span>
+
+</a>
+
+<div class="other-contact">
+  <a href="index.html#contact">∨ その他のお問い合わせ方法はこちら</a>
+</div>
