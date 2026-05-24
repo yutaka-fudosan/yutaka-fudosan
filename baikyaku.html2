@@ -689,40 +689,72 @@ nav a{
 <body>
 
 <header>
+  <div class="container header-inner">
 
-  <div class="header-inner">
+    <a href="index.html" class="logo">
 
-    <div class="logo">
+      <img src="favicon.png" alt="ユタカ不動産ロゴ">
 
-      <img src="favicon.png">
+      <div>
 
-      <div class="logo-text">
+        <div class="logo-title">
+          株式会社ユタカ不動産
+        </div>
 
-        <h1>株式会社ユタカ不動産</h1>
-
-        <p>
-          昭和51年創業　
-          刈谷市密着の不動産会社
-        </p>
+        <div class="logo-sub">
+          昭和51年創業　刈谷市密着の不動産会社
+        </div>
 
       </div>
 
-    </div>
+    </a>
 
     <nav>
 
-      <a href="index.html">TOP</a>
-      <a href="#">会社案内</a>
-      <a href="#">事業内容</a>
-      <a href="#">アクセス</a>
-      <a href="#">お問い合わせ</a>
+      <ul>
+
+        <li>
+          <a href="index.html">
+            TOP
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#services">
+            事業内容
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#company">
+            会社概要
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#access">
+            アクセス
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            お問い合わせ
+          </a>
+        </li>
+
+        <li>
+          <a href="index.html#contact">
+            その他のお問い合わせ
+          </a>
+        </li>
+
+      </ul>
 
     </nav>
 
   </div>
-
 </header>
-
 <section class="baikyaku-hero">
 
   <div class="baikyaku-inner">
