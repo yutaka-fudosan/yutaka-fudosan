@@ -29,61 +29,73 @@ img{max-width:100%;display:block}
 .container{width:92%;max-width:1180px;margin:0 auto}
 
 /* header */
+/* header */
 header{
   background:#fff;
-  border-bottom:1px solid #eee7dc;
+  border-bottom:3px solid #0b2d5f;
   position:sticky;
   top:0;
-  z-index:999;
+  z-index:1000;
 }
 
 .header-inner{
   width:92%;
   max-width:1180px;
   margin:0 auto;
-  padding:16px 0;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
+  gap:26px;
+  padding:16px 0;
 }
 
 .logo{
   display:flex;
   align-items:center;
   gap:14px;
+  white-space:nowrap;
 }
 
 .logo img{
-  width:68px;
-  height:68px;
+  width:70px;
+  height:70px;
+  object-fit:contain;
 }
 
 .logo-title{
   font-family:"Zen Maru Gothic",sans-serif;
   font-size:30px;
   font-weight:700;
-  color:#12366f;
+  letter-spacing:.03em;
+  line-height:1.25;
+  color:#0b2d5f;
 }
 
 .logo-sub{
-  font-size:12px;
-  color:#444;
+  font-size:13px;
+  letter-spacing:.08em;
+  margin-top:3px;
+  color:#0b2d5f;
 }
 
 nav ul{
   display:flex;
   list-style:none;
   gap:30px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
 }
 
 nav a{
+  color:#0b2d5f;
   font-size:14px;
-  font-weight:700;
-  color:#222;
+  font-weight:600;
+  transition:.2s;
 }
 
-nav a:hover{color:#b38b43}
-
+nav a:hover{
+  color:#9b7b3f;
+}
 /* hero */
 .kanri-hero{
   position:relative;
@@ -320,28 +332,37 @@ nav a:hover{color:#b38b43}
     display:block;
   }
 
+  .logo{
+    gap:12px;
+    margin-bottom:14px;
+  }
+
   .logo img{
-    width:54px;
-    height:54px;
+    width:52px;
+    height:52px;
   }
 
   .logo-title{
-    font-size:22px;
+    font-size:21px;
+    line-height:1.35;
+    letter-spacing:.02em;
   }
 
   .logo-sub{
     font-size:11px;
+    letter-spacing:.03em;
   }
 
   nav ul{
-    margin-top:16px;
+    margin-top:18px;
     flex-wrap:wrap;
-    gap:18px;
+    gap:16px;
   }
 
   nav a{
     font-size:14px;
   }
+}
 
   .kanri-inner{
     padding:86px 0 58px;
