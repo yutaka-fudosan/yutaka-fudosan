@@ -32,53 +32,137 @@
       position:sticky;
       top:0;
       z-index:1000;
+      box-shadow:0 3px 14px rgba(0,0,0,.06);
+    }
+    .header-top{
+      background:#0b2d5f;
+      color:#fff;
+      font-size:12px;
+      letter-spacing:.06em;
+    }
+    .header-top-inner{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:7px 0;
+    }
+    .header-top strong{
+      color:#d8b46a;
+      font-weight:700;
+    }
+    .header-contact-mini{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      white-space:nowrap;
+    }
+    .header-contact-mini a{
+      color:#fff;
+      font-weight:700;
     }
     .header-inner{
       display:flex;
       justify-content:space-between;
       align-items:center;
       gap:26px;
-      padding:16px 0;
+      padding:13px 0 11px;
     }
     .logo{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:13px;
       white-space:nowrap;
     }
     .logo img{
-      width:70px;
-      height:70px;
+      width:62px;
+      height:62px;
       object-fit:contain;
     }
     .logo-title{
       font-family:"Zen Maru Gothic",sans-serif;
-      font-size:30px;
+      font-size:28px;
       font-weight:700;
       letter-spacing:.03em;
       line-height:1.25;
       color:#0b2d5f;
     }
     .logo-sub{
-      font-size:13px;
-      letter-spacing:.08em;
+      font-size:12px;
+      letter-spacing:.05em;
       margin-top:3px;
+      color:#38557d;
+    }
+    .header-right{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-end;
+      gap:10px;
+    }
+    .header-buttons{
+      display:flex;
+      gap:9px;
+      align-items:center;
+    }
+    .header-btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:6px;
+      padding:8px 13px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:700;
+      line-height:1;
+      transition:.2s;
+    }
+    .header-btn.tel{
+      background:#0b2d5f;
+      color:#fff;
+    }
+    .header-btn.line{
+      background:#06c755;
+      color:#fff;
+    }
+    .header-btn.mail{
+      background:#f3ede2;
       color:#0b2d5f;
+      border:1px solid #d8c7aa;
+    }
+    .header-btn:hover{
+      transform:translateY(-1px);
+      opacity:.92;
     }
     nav ul{
       display:flex;
       list-style:none;
-      gap:30px;
+      gap:22px;
       flex-wrap:wrap;
       justify-content:flex-end;
     }
     nav a{
       color:#0b2d5f;
-      font-size:14px;
-      font-weight:600;
+      font-size:13px;
+      font-weight:700;
+      transition:.2s;
+      position:relative;
+    }
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      bottom:-5px;
+      width:0;
+      height:2px;
+      background:#c7a45b;
       transition:.2s;
     }
-    nav a:hover{color:#9b7b3f}
+    nav a:hover{
+      color:#9b7b3f;
+    }
+    nav a:hover::after{
+      width:100%;
+    }
     .kanri-hero{
       min-height:calc(100vh - 105px);
       display:flex;
@@ -472,11 +556,20 @@
     }
     footer a{margin-right:18px}
     @media(max-width:900px){
-      .header-inner{display:block}
+      .header-inner{
+        display:block;
+      }
+      .logo{
+        justify-content:center;
+        margin-bottom:12px;
+      }
+      .header-right{
+        align-items:center;
+      }
       nav ul{
-        margin-top:18px;
-        justify-content:flex-start;
-        gap:24px;
+        margin-top:4px;
+        justify-content:center;
+        gap:20px;
       }
       .kanri-inner h1{
         font-size:58px;
@@ -488,14 +581,33 @@
     }
     @media(max-width:640px){
       .container{width:92%}
-      .header-inner{display:block}
+      .header-top{
+        font-size:10px;
+      }
+      .header-top-inner{
+        display:block;
+        text-align:center;
+        padding:6px 0;
+      }
+      .header-contact-mini{
+        justify-content:center;
+        gap:10px;
+        margin-top:3px;
+        font-size:10px;
+        flex-wrap:wrap;
+      }
+      .header-inner{
+        display:block;
+        padding:10px 0 9px;
+      }
       .logo{
-        gap:12px;
-        margin-bottom:14px;
+        gap:10px;
+        justify-content:center;
+        margin-bottom:10px;
       }
       .logo img{
-        width:52px;
-        height:52px;
+        width:48px;
+        height:48px;
       }
       .logo-title{
         font-size:21px;
@@ -503,11 +615,38 @@
         letter-spacing:.02em;
       }
       .logo-sub{
-        font-size:11px;
-        letter-spacing:.03em;
+        font-size:10px;
+        letter-spacing:.02em;
+        text-align:center;
       }
-      nav ul{gap:16px}
-      nav a{font-size:14px}
+      .header-right{
+        align-items:stretch;
+        gap:9px;
+      }
+      .header-buttons{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+        gap:6px;
+      }
+      .header-btn{
+        padding:8px 6px;
+        font-size:11px;
+        border-radius:6px;
+      }
+      nav{
+        overflow-x:auto;
+        padding-bottom:2px;
+      }
+      nav ul{
+        flex-wrap:nowrap;
+        justify-content:flex-start;
+        gap:16px;
+        white-space:nowrap;
+        margin-top:0;
+      }
+      nav a{
+        font-size:12px;
+      }
       .kanri-hero{
         min-height:auto;
         background:
@@ -651,23 +790,54 @@
 </head>
 <body>
 <header>
+  <div class="header-top">
+    <div class="container header-top-inner">
+      <div>
+        <strong>昭和51年創業</strong>｜刈谷市密着の不動産会社｜売買・管理・賃貸・月極駐車場
+      </div>
+
+      <div class="header-contact-mini">
+        <span>営業時間 10:00〜19:00</span>
+        <a href="tel:0566231758">TEL 0566-23-1758</a>
+      </div>
+    </div>
+  </div>
+
   <div class="container header-inner">
-    <a href="index.html" class="logo">
+    <a href="/" class="logo">
       <img src="favicon.png" alt="ユタカ不動産ロゴ">
       <div>
         <div class="logo-title">株式会社ユタカ不動産</div>
-        <div class="logo-sub">昭和51年創業　刈谷市密着の不動産会社</div>
+        <div class="logo-sub">刈谷市で不動産売買・管理・賃貸・月極駐車場のご相談なら</div>
       </div>
     </a>
-<nav>
-  <ul>
-    <li><a href="index.html">TOP</a></li>
-    <li><a href="kounyu.html">購入相談</a></li>
-    <li><a href="baikyaku.html">売却相談</a></li>
-    <li><a href="kanri.html">管理委託</a></li>
-    <li><a href="#contact">お問い合わせ</a></li>
-  </ul>
-</nav>
+
+    <div class="header-right">
+      <div class="header-buttons">
+        <a href="tel:0566231758" class="header-btn tel">
+          <i class="fa-solid fa-phone"></i> 電話する
+        </a>
+        <a href="https://lin.ee/W2HbWIG" class="header-btn line" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-line"></i> LINE相談
+        </a>
+        <a href="mailto:office@yutaka-fudosan.com" class="header-btn mail">
+          <i class="fa-solid fa-envelope"></i> メール
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="/">トップ</a></li>
+          <li><a href="kounyu.html">購入相談</a></li>
+          <li><a href="baikyaku.html">売却相談</a></li>
+          <li><a href="kanri.html">不動産管理</a></li>
+          <li><a href="/#services">事業内容</a></li>
+          <li><a href="/#company">会社概要</a></li>
+          <li><a href="/#access">アクセス</a></li>
+          <li><a href="/#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 </header>
 <section class="kanri-hero">
@@ -965,10 +1135,13 @@
 <footer>
   <div class="container footer-inner">
     <div>
-      <a href="index.html">TOP</a>
+      <a href="/">トップ</a>
       <a href="kounyu.html">購入相談</a>
       <a href="baikyaku.html">売却相談</a>
-      <a href="kanri.html">管理委託</a>
+      <a href="kanri.html">不動産管理</a>
+      <a href="/#services">事業内容</a>
+      <a href="/#company">会社概要</a>
+      <a href="/#access">アクセス</a>
       <a href="#contact">お問い合わせ</a>
     </div>
     <div>© 株式会社ユタカ不動産 All Rights Reserved.</div>
