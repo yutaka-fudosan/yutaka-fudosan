@@ -941,6 +941,16 @@ nav a:hover::after{
     .consultation-guide li{margin-bottom:6px}
     .cta-section .consultation-guide .consultation-guide-note{font-size:14px;margin-bottom:0}
     @media(max-width:640px){.consultation-guide{padding:20px 18px}.consultation-guide h3{font-size:19px}.consultation-guide li{font-size:15px}}
+    .related-consultation{padding:56px 0;background:#f1eee7}
+    .related-consultation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:960px;margin:0 auto}
+    .related-consultation-card{display:block;background:#fff;border:1px solid #ddd6c7;border-radius:14px;padding:26px;color:#0b2d5f}
+    .related-consultation-card h3{font-size:21px;margin-bottom:12px}
+    .related-consultation-card p{font-size:15px;color:#555;margin-bottom:18px}
+    .related-consultation-card span{font-weight:700;text-decoration:underline;text-underline-offset:4px}
+    .related-consultation-card:hover{border-color:#0b2d5f}
+    .related-consultation-card:focus-visible{outline:3px solid #0b2d5f;outline-offset:4px}
+    .cta-section .mail-template-note{font-size:14px;margin:18px 0 0;line-height:1.8}
+    @media(max-width:640px){.related-consultation-grid{grid-template-columns:1fr}.related-consultation-card{padding:22px}.related-consultation-card h3{font-size:19px}}
   </style>
 </head>
 <body>
@@ -975,7 +985,7 @@ nav a:hover::after{
         <a href="https://lin.ee/W2HbWIG" class="header-btn line" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-line"></i> LINE相談
         </a>
-        <a href="mailto:office@yutaka-fudosan.com" class="header-btn mail">
+        <a href="mailto:office@yutaka-fudosan.com?subject=%E4%B8%8D%E5%8B%95%E7%94%A3%E5%A3%B2%E5%8D%B4%E3%83%BB%E7%84%A1%E6%96%99%E6%9F%BB%E5%AE%9A%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%A6%E3%82%BF%E3%82%AB%E4%B8%8D%E5%8B%95%E7%94%A3%20%E5%BE%A1%E4%B8%AD%0D%0A%0D%0A%E4%B8%8D%E5%8B%95%E7%94%A3%E3%81%AE%E5%A3%B2%E5%8D%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%8F%E3%80%81%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0D%0A%E5%88%86%E3%81%8B%E3%82%8B%E7%AF%84%E5%9B%B2%E3%81%A7%E8%A8%98%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%0D%0A%E3%80%90%E7%89%A9%E4%BB%B6%E3%81%AE%E6%89%80%E5%9C%A8%E5%9C%B0%E3%80%91%0D%0A%0D%0A%E3%80%90%E7%89%A9%E4%BB%B6%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%80%91%E5%9C%9F%E5%9C%B0%E3%83%BB%E6%88%B8%E5%BB%BA%E3%81%A6%E3%83%BB%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%81%9D%E3%81%AE%E4%BB%96%0D%0A%0D%0A%E3%80%90%E5%A3%B2%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%99%82%E6%9C%9F%E3%80%91%0D%0A%0D%0A%E3%80%90%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%E3%80%91%0D%0A%0D%0A%E3%80%90%E3%81%8A%E5%90%8D%E5%89%8D%E3%80%91%0D%0A" class="header-btn mail">
           <i class="fa-solid fa-envelope"></i> メール
         </a>
       </div>
@@ -1290,6 +1300,15 @@ nav a:hover::after{
 </div>
   </div>
 </section>
+<section class="related-consultation" id="related">
+  <div class="container">
+    <div class="section-title"><span></span><h2>売却方法に迷っている方へ</h2><span></span></div>
+    <div class="related-consultation-grid">
+      <a href="kaitori.html" class="related-consultation-card"><h3>不動産買取について</h3><p>仲介での売却とあわせて、買取という選択肢も検討したい方へ。</p><span>買取のご案内を見る →</span></a>
+      <a href="akiya.html" class="related-consultation-card"><h3>空き家・相続不動産のご相談</h3><p>使っていない家を、売る・貸す・管理するなど、今後の方針から相談したい方へ。</p><span>空き家相談のご案内を見る →</span></a>
+    </div>
+  </div>
+</section>
 <section class="cta-section" id="contact">
   <div class="container">
 <h2>無料査定・売却相談</h2>
@@ -1311,8 +1330,9 @@ nav a:hover::after{
 <div class="contact-buttons">
   <a href="tel:0566231758" class="btn-contact tel">電話で売却相談</a>
   <a href="https://lin.ee/W2HbWIG" class="btn-contact line" target="_blank" rel="noopener noreferrer">LINEで売却相談</a>
-  <a href="mailto:office@yutaka-fudosan.com" class="btn-contact mail">メールで売却相談</a>
+  <a href="mailto:office@yutaka-fudosan.com?subject=%E4%B8%8D%E5%8B%95%E7%94%A3%E5%A3%B2%E5%8D%B4%E3%83%BB%E7%84%A1%E6%96%99%E6%9F%BB%E5%AE%9A%E3%81%AE%E3%81%94%E7%9B%B8%E8%AB%87&amp;body=%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%E3%83%A6%E3%82%BF%E3%82%AB%E4%B8%8D%E5%8B%95%E7%94%A3%20%E5%BE%A1%E4%B8%AD%0D%0A%0D%0A%E4%B8%8D%E5%8B%95%E7%94%A3%E3%81%AE%E5%A3%B2%E5%8D%B4%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%8F%E3%80%81%E3%81%94%E9%80%A3%E7%B5%A1%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F%E3%80%82%0D%0A%E5%88%86%E3%81%8B%E3%82%8B%E7%AF%84%E5%9B%B2%E3%81%A7%E8%A8%98%E5%85%A5%E3%81%97%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%0D%0A%0D%0A%E3%80%90%E7%89%A9%E4%BB%B6%E3%81%AE%E6%89%80%E5%9C%A8%E5%9C%B0%E3%80%91%0D%0A%0D%0A%E3%80%90%E7%89%A9%E4%BB%B6%E3%81%AE%E7%A8%AE%E9%A1%9E%E3%80%91%E5%9C%9F%E5%9C%B0%E3%83%BB%E6%88%B8%E5%BB%BA%E3%81%A6%E3%83%BB%E3%83%9E%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%BB%E3%81%9D%E3%81%AE%E4%BB%96%0D%0A%0D%0A%E3%80%90%E5%A3%B2%E5%8D%B4%E5%B8%8C%E6%9C%9B%E6%99%82%E6%9C%9F%E3%80%91%0D%0A%0D%0A%E3%80%90%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%E3%80%91%0D%0A%0D%0A%E3%80%90%E3%81%8A%E5%90%8D%E5%89%8D%E3%80%91%0D%0A" class="btn-contact mail">メールで売却相談</a>
 </div>
+<p class="mail-template-note">メールボタンから、件名と記入項目入りのメールを作成できます。分かる範囲でご記入ください。<br>メールアプリが開かない場合は、office@yutaka-fudosan.com 宛てにお送りください。</p>
   </div>
 </section>
 <footer>
