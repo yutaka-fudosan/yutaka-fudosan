@@ -13,11 +13,36 @@
   
 <script type="application/ld+json">
 {
- "@context":"https://schema.org",
- "@type":"Organization",
- "name":"株式会社ユタカ不動産",
- "url":"https://yutaka-fudosan.com/",
- "logo":"https://yutaka-fudosan.com/favicon.png"
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "@id": "https://yutaka-fudosan.com/#business",
+  "name": "株式会社ユタカ不動産",
+  "url": "https://yutaka-fudosan.com/",
+  "logo": "https://yutaka-fudosan.com/favicon.png",
+  "telephone": "+81-566-23-1758",
+  "faxNumber": "+81-566-24-7621",
+  "email": "office@yutaka-fudosan.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "愛知県",
+    "addressLocality": "刈谷市",
+    "streetAddress": "新栄町7丁目61番地"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "opens": "10:00",
+    "closes": "19:00"
+  },
+  "description": "刈谷市の不動産売買・賃貸仲介・不動産管理・月極駐車場のご相談。定休日は日曜日・年末年始・不定休。"
 }
 </script>
   
@@ -1090,7 +1115,17 @@
         font-size:12px;
       }
     }
-  </style>
+  
+    .mobile-consultation-bar{display:none}
+    @media(max-width:767px){
+      body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+      .mobile-consultation-bar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:1100;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #ddd;box-shadow:0 -3px 12px rgba(0,0,0,.10)}
+      .mobile-consultation-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;margin:0;padding:10px 4px;border-radius:8px;color:#fff;font-size:14px;font-weight:700;line-height:1.3;text-align:center;background:#0b2d5f}
+      .mobile-consultation-bar .mobile-line{background:#087f3f}
+      .mobile-consultation-bar .mobile-free{background:#e2c487;color:#0b2d5f}
+      .mobile-consultation-bar a:focus-visible{outline:3px solid #0b2d5f;outline-offset:2px}
+    }
+</style>
 </head>
 
 <body>
@@ -1439,5 +1474,10 @@
   </div>
 </footer>
 
+<nav class="mobile-consultation-bar" aria-label="スマホ用の相談窓口">
+  <a href="tel:0566231758" aria-label="電話で相談する">電話相談</a>
+  <a class="mobile-line" href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE相談</a>
+  <a class="mobile-free" href="baikyaku.html#contact">無料売却相談</a>
+</nav>
 </body>
 </html>
