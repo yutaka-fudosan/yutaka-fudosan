@@ -1135,6 +1135,8 @@
     .transaction-tags span{display:inline-block;padding:5px 13px;border-radius:20px;background:#eef3ea;color:#496349;font-size:13px;font-weight:700}
     .transaction-card h3{font-size:25px;line-height:1.5;color:#0b2d5f;margin:0}
     @media(max-width:640px){.transaction-section{padding:44px 0}.transaction-heading h2{font-size:25px}.transaction-card{padding:24px}.transaction-card h3{font-size:23px}}
+
+.transaction-more{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:50px;padding:14px 30px;border-radius:10px;background:#496349;color:#fff;font-size:16px;font-weight:700}.transaction-more:hover{background:#365039}.transaction-more:focus-visible{outline:3px solid #0b2d5f;outline-offset:4px}
 </style>
 </head>
 
@@ -1379,10 +1381,7 @@
       <h2 id="transaction-title">これまでのお取引</h2>
       <p>地域の皆さまとのお取引をご紹介します。</p>
     </div>
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>土地</span><span>売買実績</span></div>
-      <h3>刈谷市新栄町</h3>
-    </article>
+    <div style="text-align:center"><a class="transaction-more" href="transactions.html">取引実績を見る <span aria-hidden="true">→</span></a></div>
   </div>
 </section>
 
