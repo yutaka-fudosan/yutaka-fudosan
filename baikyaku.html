@@ -961,6 +961,15 @@ nav a:hover::after{
       .mobile-consultation-bar .mobile-free{background:#e2c487;color:#0b2d5f}
       .mobile-consultation-bar a:focus-visible{outline:3px solid #0b2d5f;outline-offset:2px}
     }
+
+/* Keep mobile contact actions in the bottom bar. */
+@media(max-width:767px){
+  header .header-buttons{display:none}
+  header .header-inner{padding-top:8px;padding-bottom:7px;gap:12px}
+  header .header-right{gap:0}
+  header .logo{margin-bottom:6px}
+  header nav ul{gap:12px}
+}
 </style>
 </head>
 <body>
