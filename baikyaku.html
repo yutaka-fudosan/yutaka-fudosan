@@ -951,7 +951,17 @@ nav a:hover::after{
     .related-consultation-card:focus-visible{outline:3px solid #0b2d5f;outline-offset:4px}
     .cta-section .mail-template-note{font-size:14px;margin:18px 0 0;line-height:1.8}
     @media(max-width:640px){.related-consultation-grid{grid-template-columns:1fr}.related-consultation-card{padding:22px}.related-consultation-card h3{font-size:19px}}
-  </style>
+  
+    .mobile-consultation-bar{display:none}
+    @media(max-width:767px){
+      body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+      .mobile-consultation-bar{display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:6px;position:fixed;left:0;right:0;bottom:0;z-index:1100;padding:8px 10px calc(8px + env(safe-area-inset-bottom,0px));background:#fff;border-top:1px solid #ddd;box-shadow:0 -3px 12px rgba(0,0,0,.10)}
+      .mobile-consultation-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;margin:0;padding:10px 4px;border-radius:8px;color:#fff;font-size:14px;font-weight:700;line-height:1.3;text-align:center;background:#0b2d5f}
+      .mobile-consultation-bar .mobile-line{background:#087f3f}
+      .mobile-consultation-bar .mobile-free{background:#e2c487;color:#0b2d5f}
+      .mobile-consultation-bar a:focus-visible{outline:3px solid #0b2d5f;outline-offset:2px}
+    }
+</style>
 </head>
 <body>
 <header>
@@ -1347,5 +1357,10 @@ nav a:hover::after{
     <div>© 株式会社ユタカ不動産 All Rights Reserved.</div>
   </div>
 </footer>
+<nav class="mobile-consultation-bar" aria-label="スマホ用の相談窓口">
+  <a href="tel:0566231758" aria-label="電話で相談する">電話相談</a>
+  <a class="mobile-line" href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE相談</a>
+  <a class="mobile-free" href="#contact">無料売却相談</a>
+</nav>
 </body>
 </html>
