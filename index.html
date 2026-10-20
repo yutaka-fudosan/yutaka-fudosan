@@ -1152,6 +1152,24 @@
 .local-brand .brand-history>span,.local-brand .brand-name>span{display:inline-block}
 .local-brand .brand-history{font-size:.85em;margin-bottom:6px}
 @media(max-width:767px){.hero h1.local-brand{font-size:28px;letter-spacing:.02em;line-height:1.65;margin-bottom:22px}.local-brand .brand-history{font-size:.9em;margin-bottom:12px}}
+
+/* Gentle, one-time motion; content stays available without JavaScript. */
+@keyframes yutaka-fade-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:no-preference){
+ .hero .hero-eyebrow{animation:yutaka-fade-up .7s ease-out both}
+ .hero .local-brand{animation:yutaka-fade-up .85s ease-out .12s both}
+ .hero .hero-copy{animation:yutaka-fade-up .85s ease-out .24s both}
+ .hero .hero-buttons{animation:yutaka-fade-up .85s ease-out .36s both}
+ .btn-main,.btn-contact,.transaction-more{transition:transform .22s ease,box-shadow .22s ease,background-color .22s ease}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+ .btn-main:hover,.btn-contact:hover,.transaction-more:hover{transform:translateY(-3px);box-shadow:0 7px 18px rgba(0,0,0,.16)}
+}
+@media(prefers-reduced-motion:reduce){
+ html{scroll-behavior:auto}
+ *,*::before,*::after{animation:none!important;transition:none!important}
+ .btn-main:hover,.btn-contact:hover,.transaction-more:hover,.worry-card:hover,.header-btn:hover{transform:none}
+}
 </style>
 </head>
 
@@ -1516,5 +1534,23 @@
   <a class="mobile-line" href="https://lin.ee/W2HbWIG" target="_blank" rel="noopener noreferrer">LINE相談</a>
   <a class="mobile-free" href="baikyaku.html#contact">無料売却相談</a>
 </nav>
+
+<script>
+(function(){
+ const preference=window.matchMedia('(prefers-reduced-motion: reduce)');
+ if(preference.matches || !('IntersectionObserver' in window) || !Element.prototype.animate)return;
+ const observer=new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+   if(!entry.isIntersecting)return;
+   observer.unobserve(entry.target);
+   if(preference.matches)return;
+   entry.target.animate([{opacity:0,transform:'translateY(18px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'cubic-bezier(.22,.61,.36,1)'});
+   entry.target.setAttribute('data-revealed','true');
+  });
+ },{threshold:0,rootMargin:'0px 0px -32px 0px'});
+ document.querySelectorAll('section:not(.hero) > .container').forEach(function(section){observer.observe(section)});
+ preference.addEventListener('change',function(event){if(event.matches){observer.disconnect();document.getAnimations().forEach(function(animation){animation.cancel()})}});
+})();
+</script>
 </body>
 </html>
