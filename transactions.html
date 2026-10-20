@@ -1147,6 +1147,26 @@
   header nav ul{gap:12px}
 }
 .results-main .transaction-card + .transaction-card{margin-top:24px}
+
+/* Year groups keep the growing transaction archive compact. */
+.results-guide{max-width:760px;margin:0 auto 14px;color:#596253;font-size:14px}
+.results-year{max-width:760px;margin:0 auto 14px;background:#fff;border:1px solid #dedfd4;border-radius:14px;overflow:hidden}
+.results-year>summary{display:flex;align-items:center;gap:14px;padding:18px 22px;cursor:pointer;list-style:none;font-size:20px;font-weight:700;min-height:64px}
+.results-year>summary::-webkit-details-marker{display:none}
+.results-year>summary:focus-visible{outline:3px solid #0b2d5f;outline-offset:-4px}
+.results-year>summary:hover{background:#f4f6f0}
+.year-count{margin-left:auto;font-size:14px;font-weight:500;color:#60715b}
+.year-toggle{width:22px;text-align:center;font-size:24px;line-height:1}
+.year-toggle::before{content:'+'}.results-year[open] .year-toggle::before{content:'−'}
+.results-year[open]>summary{border-bottom:1px solid #e8e8df;background:#eef3ea}
+.transaction-row{padding:18px 22px}.transaction-row+.transaction-row{border-top:1px solid #e8e8df}
+.transaction-row-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.transaction-row h2{font-size:20px;line-height:1.5;margin:0}
+.transaction-kind{font-size:12px;font-weight:700;color:#496349;background:#eef3ea;padding:3px 10px;border-radius:20px}
+.transaction-kind.is-resale{background:#f4e8cf;color:#74551d}
+.transaction-row-info{font-size:14px;margin-top:7px;color:#38557d;overflow-wrap:anywhere}.row-divider{padding:0 8px;color:#9b9f95}
+.transaction-row-date,.transaction-row-note{font-size:13px;color:#596253;margin-top:3px}
+@media(max-width:640px){.results-year>summary{padding:16px;font-size:18px}.transaction-row{padding:16px}.transaction-row h2{font-size:18px}.transaction-row-info{font-size:13px}.row-divider{padding:0 5px}}
 </style>
 </head>
 <body>
@@ -1206,57 +1226,43 @@
   <div class="results-wrap">
     <div class="results-breadcrumb"><a href="index.html">トップページ</a> ／ 取引実績</div>
     <div class="results-heading"><h1>これまでのお取引</h1><p>令和4年（2022年）以降にお手伝いしたお取引を、順次ご紹介しています。</p></div>
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>マンション</span><span>買取再販実績</span></div>
-      <h2>刈谷市相生町</h2>
-      <dl class="results-details">
-        <div><dt>物件種類</dt><dd>土地・建物（マンション）</dd></div>
-        <div><dt>取引内容</dt><dd>当社で買取・リフォーム後に販売</dd></div>
-        <div><dt>面積</dt><dd>61.1㎡</dd></div>
-        <div><dt>売却時期</dt><dd><time datetime="2023-03">2023年3月（令和5年）</time></dd></div>
-      </dl>
-    </article>
-
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>宅地</span><span>売買実績</span></div>
-      <h2>知多郡東浦町</h2>
-      <dl class="results-details">
-        <div><dt>物件種類</dt><dd>土地（宅地）</dd></div>
-        <div><dt>取引内容</dt><dd>売買</dd></div>
-        <div><dt>土地面積</dt><dd>249.22㎡（約75.39坪）</dd></div>
-        <div><dt>取引時期</dt><dd><time datetime="2022-10">2022年10月（令和4年）</time></dd></div>
-      </dl>
-    </article>
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>土地</span><span>売買実績</span></div>
-      <h2>刈谷市新栄町</h2>
-      <dl class="results-details">
-        <div><dt>物件種類</dt><dd>土地</dd></div>
-        <div><dt>取引内容</dt><dd>売買</dd></div>
-        <div><dt>土地面積</dt><dd>338.34㎡（約102.35坪）</dd></div>
-        <div><dt>取引時期</dt><dd><time datetime="2022-04">2022年4月（令和4年）</time></dd></div>
-      </dl>
-    </article>
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>土地</span><span>売買実績</span></div>
-      <h2>半田市花園町</h2>
-      <dl class="results-details">
-        <div><dt>物件種類</dt><dd>土地</dd></div>
-        <div><dt>取引内容</dt><dd>売買</dd></div>
-        <div><dt>土地面積</dt><dd>774㎡（約234.14坪）</dd></div>
-        <div><dt>取引時期</dt><dd><time datetime="2022-03">2022年3月（令和4年）</time></dd></div>
-      </dl>
-    </article>
-    <article class="transaction-card">
-      <div class="transaction-tags"><span>宅地</span><span>売買実績</span></div>
-      <h2>高浜市青木町</h2>
-      <dl class="results-details">
-        <div><dt>物件種類</dt><dd>土地（宅地）</dd></div>
-        <div><dt>取引内容</dt><dd>売買</dd></div>
-        <div><dt>土地面積</dt><dd>211.01㎡（約63.83坪）</dd></div>
-        <div><dt>取引時期</dt><dd><time datetime="2022-02">2022年2月（令和4年）</time></dd></div>
-      </dl>
-    </article>
+    <p class="results-guide">年を押すと、その年のお取引をご覧いただけます。</p>
+    <details class="results-year" open>
+      <summary><span>2023年（令和5年）</span><span class="year-count">1件</span><span class="year-toggle" aria-hidden="true"></span></summary>
+      <div class="year-transactions">
+        <article class="transaction-row">
+          <div class="transaction-row-top"><h2>刈谷市相生町</h2><span class="transaction-kind is-resale">買取再販</span></div>
+          <p class="transaction-row-info">土地・建物（マンション）<span class="row-divider" aria-hidden="true">／</span>面積 61.1㎡</p>
+          <p class="transaction-row-date">売却：<time datetime="2023-03">2023年3月</time></p>
+          <p class="transaction-row-note">当社で買取・リフォーム後に販売</p>
+        </article>
+      </div>
+    </details>
+    <details class="results-year">
+      <summary><span>2022年（令和4年）</span><span class="year-count">4件</span><span class="year-toggle" aria-hidden="true"></span></summary>
+      <div class="year-transactions">
+        <article class="transaction-row">
+          <div class="transaction-row-top"><h2>知多郡東浦町</h2><span class="transaction-kind">売買</span></div>
+          <p class="transaction-row-info">土地（宅地）<span class="row-divider" aria-hidden="true">／</span>土地面積 249.22㎡（約75.39坪）</p>
+          <p class="transaction-row-date">取引：<time datetime="2022-10">2022年10月</time></p>
+        </article>
+        <article class="transaction-row">
+          <div class="transaction-row-top"><h2>刈谷市新栄町</h2><span class="transaction-kind">売買</span></div>
+          <p class="transaction-row-info">土地<span class="row-divider" aria-hidden="true">／</span>土地面積 338.34㎡（約102.35坪）</p>
+          <p class="transaction-row-date">取引：<time datetime="2022-04">2022年4月</time></p>
+        </article>
+        <article class="transaction-row">
+          <div class="transaction-row-top"><h2>半田市花園町</h2><span class="transaction-kind">売買</span></div>
+          <p class="transaction-row-info">土地<span class="row-divider" aria-hidden="true">／</span>土地面積 774㎡（約234.14坪）</p>
+          <p class="transaction-row-date">取引：<time datetime="2022-03">2022年3月</time></p>
+        </article>
+        <article class="transaction-row">
+          <div class="transaction-row-top"><h2>高浜市青木町</h2><span class="transaction-kind">売買</span></div>
+          <p class="transaction-row-info">土地（宅地）<span class="row-divider" aria-hidden="true">／</span>土地面積 211.01㎡（約63.83坪）</p>
+          <p class="transaction-row-date">取引：<time datetime="2022-02">2022年2月</time></p>
+        </article>
+      </div>
+    </details>
     <p class="results-note">こちらは過去のお取引実績です。現在販売中の物件ではありません。</p>
     <div class="results-action"><a class="results-link" href="baikyaku.html#contact">不動産の売却について相談する</a><a class="results-return" href="index.html">トップページへ戻る</a></div>
   </div>
