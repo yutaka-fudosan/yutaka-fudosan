@@ -335,10 +335,23 @@
     .hero-secondary-actions{gap:8px 24px}
 
     .hero-secondary-actions a{
-      color:rgba(255,255,255,.96);
+      display:inline-flex;
+      align-items:center;
+      min-height:42px;
+      padding:9px 16px;
+      color:rgba(255,255,255,.98);
+      background:rgba(5,37,86,.32);
+      border:1px solid rgba(255,255,255,.58);
+      border-radius:3px;
       font-size:14px;
       font-weight:600;
-      text-underline-offset:4px;
+      text-decoration:none;
+      transition:background-color .2s ease,border-color .2s ease;
+    }
+
+    .hero-secondary-actions a:hover{
+      background:rgba(255,255,255,.16);
+      border-color:#fff;
     }
 
     .btn-main{
