@@ -504,6 +504,19 @@
     }
 
     /* =========================
+       HISTORY PHOTO
+    ========================= */
+
+    .history-section{background:#fff;border-top:1px solid #eee5d8;border-bottom:1px solid #eee5d8}
+    .history-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:42px;align-items:center}
+    .history-photo{margin:0}
+    .history-photo img{width:100%;aspect-ratio:1.41;object-fit:cover;border:1px solid #e1d4bf;box-shadow:0 10px 28px rgba(11,45,95,.12)}
+    .history-photo figcaption{margin-top:9px;color:#6b7280;font-size:12px;text-align:right}
+    .history-label{color:#9b7b3f;font-family:"Noto Serif JP",serif;font-size:13px;letter-spacing:.18em;font-weight:700}
+    .history-copy h2{margin:10px 0 16px;color:#0b2d5f;font-family:"Noto Serif JP",serif;font-size:29px;line-height:1.65;letter-spacing:.06em}
+    .history-copy p{color:#333;font-size:15px;line-height:2.1}
+
+    /* =========================
        SERVICES
     ========================= */
 
@@ -799,6 +812,7 @@
         grid-template-columns:repeat(2,1fr);
       }
 
+      .history-grid,
       .intro-box,
       .service-grid,
       .contact-layout,
@@ -1015,6 +1029,10 @@
         font-size:13px;
       }
 
+      .history-section{padding:48px 0}
+      .history-grid{gap:22px}
+      .history-copy h2{font-size:23px}
+      .history-copy p{font-size:14px}
       .service-grid{gap:16px}
 
       .service-card{
@@ -1330,6 +1348,21 @@
         <li>賃貸物件・月極駐車場の管理相談</li>
         <li>不動産の活用方法や今後の方針相談</li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<section class="history-section" aria-labelledby="history-title">
+  <div class="container history-grid">
+    <figure class="history-photo">
+      <img src="yutaka-kariya-old-street.jpg" alt="昔の刈谷の街並み。通り沿いにユタカ不動産の看板が見える写真" loading="lazy" decoding="async">
+      <figcaption>昔の刈谷の街並み。ユタカ不動産の看板が見えます。</figcaption>
+    </figure>
+    <div class="history-copy">
+      <span class="history-label">SINCE 1976</span>
+      <h2 id="history-title">刈谷の街とともに、<br>歩んできました。</h2>
+      <p>写真には、昔の刈谷の街並みと「ユタカ不動産」の看板が写っています。昭和51年の創業から、地域の皆さまに支えられながら、刈谷のまちとともに歩んできました。</p>
+      <p>これからも地元に根ざした不動産会社として、一人ひとりのご相談に丁寧に向き合ってまいります。</p>
     </div>
   </div>
 </section>
