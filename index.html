@@ -1246,7 +1246,7 @@
  *,*::before,*::after{animation:none!important;transition:none!important}
  .btn-main:hover,.btn-contact:hover,.transaction-more:hover,.worry-card:hover,.header-btn:hover{transform:none}
 }
-.store-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:880px;margin:0 auto 44px}.store-gallery figure{margin:0}.store-gallery img{width:100%;height:auto;border-radius:6px}.store-gallery figcaption{text-align:center;padding-top:10px;font-size:15px}@media(max-width:640px){.store-gallery{grid-template-columns:1fr;max-width:360px;gap:24px}}
+.store-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:0 auto 48px}.store-gallery figure{margin:0;min-width:0}.store-gallery a{display:block;border-radius:8px;overflow:hidden;background:#eee5d8}.store-gallery a:focus-visible{outline:3px solid #0b2d5f;outline-offset:4px}.store-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;object-position:center 62%}.store-gallery .store-interior{object-position:center 75%}.store-gallery .store-parking{object-position:center 80%}.store-gallery figcaption{padding-top:14px;font-size:16px;font-weight:700}.store-gallery figcaption span{display:block;margin-top:4px;font-size:13px;line-height:1.8;color:#555;font-weight:400}@media(max-width:640px){.store-gallery{grid-template-columns:1fr;max-width:440px;gap:28px;margin-bottom:36px}.store-gallery figcaption{padding-top:10px}}
 </style>
 </head>
 
@@ -1541,7 +1541,14 @@
 </section>
 
 <section class="info-section">
-  <div class="container"><div class="section-title"><h2>店舗のご案内</h2></div><div class="store-gallery"><figure><img src="store-entrance.jpeg" alt="株式会社ユタカ不動産の店舗入口" loading="lazy" decoding="async" width="1152" height="1536"><figcaption>店舗入口</figcaption></figure><figure><img src="store-interior.jpeg" alt="ユタカ不動産の店内、ご相談スペース" loading="lazy" decoding="async" width="1152" height="1536"><figcaption>ご相談スペース</figcaption></figure></div></div>
+  <div class="container">
+    <div class="section-title"><h2>店舗のご案内</h2></div>
+    <div class="store-gallery">
+      <figure><a href="store-entrance.jpeg" target="_blank" rel="noopener" aria-label="店舗入口の写真を拡大"><img src="store-entrance.jpeg" alt="株式会社ユタカ不動産の店舗入口" loading="lazy" decoding="async" width="1152" height="1536"></a><figcaption>店舗入口<span>ユタカ不動産の表示が目印です。</span></figcaption></figure>
+      <figure><a href="store-interior.jpeg" target="_blank" rel="noopener" aria-label="ご相談スペースの写真を拡大"><img class="store-interior" src="store-interior.jpeg" alt="ユタカ不動産の店内、ご相談スペース" loading="lazy" decoding="async" width="1152" height="1536"></a><figcaption>ご相談スペース<span>不動産のこと、お気軽にご相談ください。</span></figcaption></figure>
+      <figure><a href="store-parking.jpeg" target="_blank" rel="noopener" aria-label="お客様用駐車場の写真を拡大"><img class="store-parking" src="store-parking.jpeg" alt="ユタカ不動産のお客様用駐車場。8番・9番の看板が目印です" loading="lazy" decoding="async" width="1152" height="1536"></a><figcaption>お客様用駐車場｜8番・9番<span>看板を目印に、前向き駐車でご利用ください。</span></figcaption></figure>
+    </div>
+  </div>
   <div class="container info-grid">
 
     <div class="info-box" id="company">
@@ -1597,7 +1604,7 @@
 
       <p>名鉄三河線「刈谷市駅」より徒歩約7分</p>
       <p>お車でお越しの方は、お客様用駐車場の8番・9番をご利用ください。</p>
-      <figure style="margin:22px 0 0;max-width:420px"><img src="store-parking.jpeg" alt="ユタカ不動産のお客様用駐車場。8番・9番の看板が目印です" width="1152" height="1536" loading="lazy" decoding="async" style="width:100%;height:auto;border-radius:6px"><figcaption style="margin-top:8px;font-size:14px">お客様用駐車場（8番・9番）<br>ユタカ不動産の看板を目印に、前向き駐車でご利用ください。</figcaption></figure>
+
     </div>
 
   </div>
@@ -1645,5 +1652,6 @@
 </script>
 </body>
 </html>
+
 
 
