@@ -177,6 +177,58 @@ nav a.on::after{transform:scaleX(1)}
 .contact-email{font-size:13px;color:rgba(242,237,224,.75);margin:16px 0 0!important}
 @media(max-width:600px){.photo-set{grid-template-columns:1fr 1fr}.photo-set figure:last-child{grid-column:1/-1}.social-grid{grid-template-columns:1fr}.social-card img{width:72px;height:72px}}
 
+@media(max-width:600px){
+html{scroll-padding-top:96px}
+.w{padding:0 18px}
+header{height:92px}
+header.sc{height:80px}
+header .w{flex-wrap:wrap;align-content:center;gap:5px 8px}
+.logo{order:1;min-width:0;font-size:15px;letter-spacing:.01em;white-space:nowrap}
+.logo small{font-size:8px;letter-spacing:.22em}
+.tel{order:2;font-size:15px;letter-spacing:.04em}
+nav{order:3;display:flex;flex:0 0 100%;width:100%;gap:22px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;font-size:11px;letter-spacing:.08em}
+nav::-webkit-scrollbar{display:none}
+.hero{margin-top:-92px;min-height:auto;padding:calc(92px + 28px) 0 38px}
+.hero .w{gap:18px}
+.hero .eye{font-size:11px;margin-bottom:12px}
+h1{font-size:clamp(19px,5.8vw,30px);line-height:1.5;letter-spacing:.02em;margin-bottom:18px}
+.lead{font-size:14px;line-height:1.8;margin-bottom:22px}
+.cta{gap:10px}
+.cta .btn{flex:1 1 100%;min-width:0;min-height:52px;padding:0 14px;font-size:13px}
+.note{font-size:11px;margin-top:14px}
+.stats{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:24px}
+.stats div{font-size:10px;padding:12px 7px 0 0}
+.stats div+div{padding-left:8px}
+.stats b{font-size:26px}
+.stats b small{font-size:11px}
+.art{display:none}
+section{padding:68px 0}
+.sec-h{margin-bottom:30px}
+h2{font-size:clamp(25px,7vw,32px);line-height:1.5}
+.row{padding:22px 4px;grid-template-columns:34px minmax(0,1fr) 18px;gap:8px 10px}
+.row .n{font-size:18px}
+.row h3{font-size:18px}
+.row p{font-size:13px}
+.row .ar{width:14px}
+.two{grid-template-columns:minmax(0,1fr);gap:30px}
+.photo-frame{margin-right:8px}
+.photo-frame figcaption{font-size:11px;padding:9px 10px 11px}
+.tblw{overflow:visible}
+.tblw table{min-width:0;table-layout:fixed}
+.tblw th{width:30%;white-space:normal;padding-right:10px}
+.tblw td{overflow-wrap:anywhere}
+.photo-set{grid-template-columns:1fr 1fr}
+.photo-set figure:last-child{grid-column:1/-1}
+.social-grid{grid-template-columns:1fr}
+.social-card img{width:72px;height:72px}
+.fin{padding:72px 0 88px}
+.fin h2{font-size:clamp(27px,7.2vw,34px)}
+.fin p{font-size:14px}
+.bar a{min-height:56px;font-size:12px;letter-spacing:.05em}
+.hero.sb{padding:calc(92px + 38px) 0 52px}
+}
+@media(max-width:360px){.w{padding:0 14px}.logo{font-size:14px}.tel{font-size:14px}.hero h1{font-size:19px}.stats div{font-size:9.5px}}
+
 </style>
 </head>
 <body>
@@ -250,7 +302,7 @@ nav a.on::after{transform:scaleX(1)}
 <div class="q"><button aria-expanded="false">査定や相談は無料ですか？</button><div class="a"><div><p>査定・売却相談は無料です。</p></div></div></div>
 <div class="q"><button aria-expanded="false">売るか貸すか決まっていなくても相談できますか？</button><div class="a"><div><p>できます。状況をお聞きしながら、一緒に整理します。</p></div></div></div>
 <div class="q"><button aria-expanded="false">刈谷市以外の物件も相談できますか？</button><div class="a"><div><p>刈谷市を中心に周辺地域も承っています。エリア外の物件も、まずはお気軽にご相談ください。</p></div></div></div>
-<div class="q"><button aria-expanded="false">営業時間外に連絡してもよいですか？</button><div class="a"><div><p>LINE・メールは24時間受け付けています。営業時間外も、対応できる場合はご返信します。</p></div></div></div>
+<div class="q"><button aria-expanded="false">営業時間外に連絡してもよいですか？</button><div class="a"><div><p>LINE・メールは24時間受け付けています（返信は営業時間内）。営業時間外も、対応できる場合はご返信します。</p></div></div></div>
 </div></div></section>
 
 </div>
@@ -290,7 +342,7 @@ nav a.on::after{transform:scaleX(1)}
 <a class="btn b2" href="https://www.instagram.com/yutaka_fudosan/">Instagram<i></i></a>
 <a class="btn b2" href="mailto:office@yutaka-fudosan.com">メール<i></i></a>
 </div>
-<p class="note" style="margin-top:20px;color:var(--iv)">LINE・メールは24時間受付（ご返信は営業時間内）</p>
+<p class="note" style="margin-top:20px;color:var(--iv)">LINE・メール受付（返信は営業時間内）。営業時間外も、対応できる場合はご返信します。</p>
 <div class="social-grid">
 <a class="social-card" href="https://lin.ee/W2HbWIG"><img src="https://yutaka-fudosan.com/line.png" alt="ユタカ不動産 LINE公式アカウントのQRコード"><span><b>LINEはこちら</b><small>スマートフォンからQRコードを読み取れます</small></span></a>
 <a class="social-card" href="https://www.instagram.com/yutaka_fudosan/"><img src="https://yutaka-fudosan.com/insta.jpg" alt="ユタカ不動産 InstagramのQRコード"><span><b>Instagramはこちら</b><small>@yutaka_fudosan</small></span></a>
@@ -318,7 +370,7 @@ buy:{en:'BUY',h:'暮らしに合う住まいを、<br>一緒に見つけます�
 ['cards','START','探す前に整理したいこと','条件が固まっていなくても大丈夫です。一緒に整理します。',[['エリア','通勤・通学、ご家族やご実家との距離を考えて絞り込みます。'],['予算と資金計画','物件価格だけでなく、諸費用や将来の支出も含めて考えます。'],['学校区・生活環境','学区、買い物、病院など、毎日の暮らしやすさを確認します。'],['将来の暮らし方','ご家族の変化や住み続ける期間を踏まえて選びます。']]],
 ['steps','FLOW','購入の流れ','一般的な流れです。ご事情により前後します。',[['ご相談・条件整理','ご希望のエリア・予算・暮らし方をお聞きします。'],['物件のご紹介・内見','条件に合う物件をご紹介し、現地をご案内します。'],['お申し込み・資金計画','購入の意思を伝え、資金計画やローンの準備を進めます。'],['売買契約','重要事項をご説明し、内容にご納得いただいてから契約します。'],['お引き渡し','手続きを終えて、新しい住まいのスタートです。']]],
 ['chk','CHECKLIST','現地で確認したいポイント','一般的な例です。',['道路・接道の状況、駐車のしやすさ','日当たり・風通し・周辺の環境','学校・スーパー・病院などの距離','ハザードマップなど、災害に関する情報','将来の維持費・修繕の見通し']],
-['faq','FAQ','購入のよくある質問','',[['土地だけの相談もできますか？','土地・戸建て・マンションの売買を取り扱っています。ご希望をお聞かせください。'],['条件がまだ固まっていません。','整理するところからご一緒します。お気軽にご相談ください。'],['営業時間外に連絡してもよいですか？','LINE・メールは24時間受け付けています。営業時間外も、対応できる場合はご返信します。']]]]},
+['faq','FAQ','購入のよくある質問','',[['土地だけの相談もできますか？','土地・戸建て・マンションの売買を取り扱っています。ご希望をお聞かせください。'],['条件がまだ固まっていません。','整理するところからご一緒します。お気軽にご相談ください。'],['営業時間外に連絡してもよいですか？','LINE・メールは24時間受け付けています（返信は営業時間内）。営業時間外も、対応できる場合はご返信します。']]]]},
 manage:{en:'MANAGE',h:'大切な賃貸物件を、<br>安心して任せられるように。',lead:'賃貸物件・月極駐車場の管理、入居者対応、空室募集などをご相談いただけます。',s:[
 ['cards','SERVICE','お手伝いできること','',[['賃貸物件の管理','オーナー様に代わり、物件の管理をお手伝いします。'],['月極駐車場の管理','月極駐車場の管理についてもご相談いただけます。'],['入居者対応','入居者様からのご連絡・ご相談に対応します。'],['空室募集・賃貸仲介','入居者募集のご相談を承ります。'],['修繕・リフォーム','物件の修繕やリフォームについてもご相談ください。']]],
 ['cards','CONCERNS','こんなお悩みはありませんか','',[['遠方で管理が難しい','なかなか足を運べず、物件の状況が気になる。'],['空室が続いている','募集の進め方や条件を見直したい。'],['入居者対応の負担','連絡や手配に時間を取られている。'],['管理の見直しをしたい','いまの管理体制を相談してみたい。']]],
