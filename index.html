@@ -259,7 +259,17 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
 .home-story-copy h2{margin:0 0 26px;font-size:clamp(32px,3.4vw,68px);line-height:1.45;letter-spacing:.065em}
 .home-story-copy p:not(.home-intro-origin){margin:0 0 18px}
 .home-story-lead{font:500 clamp(18px,1.35vw,26px)/1.9 "Shippori Mincho","Yu Mincho",serif}
+#parking.home-parking{padding:clamp(42px,6vw,92px) 0;background:#2d4d41;color:#fff}
+.home-parking .w{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:center;gap:32px clamp(30px,7vw,96px)}
+.home-parking .home-intro-origin{margin-bottom:18px;color:#ded6b8}
+.home-parking h2{margin:0 0 14px;font-size:clamp(28px,3.2vw,48px);line-height:1.45}
+.home-parking p:not(.home-intro-origin){margin:0;color:#edf0e7}
+.home-parking-links{display:grid;justify-items:start;gap:8px}
+.home-parking .home-intro-primary{background:#f0efe6;color:#233d32}
+.home-parking .home-intro-primary:hover{background:#e0e5d8}
+.home-parking .home-intro-link{border-color:#a8b7a7}
 @media(max-width:760px){
+  .home-parking .w{grid-template-columns:1fr}
   #about.home-story{grid-template-columns:1fr}
   .home-story-photo img{height:auto;aspect-ratio:5/4}
   .home-story-copy{padding:28px clamp(22px,5.5vw,42px) 42px}
@@ -288,7 +298,7 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
     <p class="home-intro-lead">家のこと、土地のこと。<br>刈谷で、ずっと。まずはお話ししませんか。</p>
     <div class="home-intro-links">
       <a class="home-intro-primary" href="#consult">ご相談内容から探す</a>
-      <a class="home-intro-link" href="https://lin.ee/W2HbWIG">月極駐車場を問い合わせる</a>
+      <a class="home-intro-link" href="#parking">月極駐車場のご案内</a>
     </div>
     <a class="home-intro-link home-intro-about" href="#about">ユタカ不動産について</a>
   </div>
@@ -336,6 +346,21 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
     <p>昭和51年の創業から、地域の皆さまに支えられながら、刈谷のまちとともに歩んできました。</p>
     <p>売買、賃貸、管理、空き家のこと。お話を伺い、ご事情に合った進め方を一緒に考えます。</p>
     <a class="home-intro-link home-intro-about" href="#access">会社概要・アクセス</a>
+  </div>
+</section>
+
+<section id="parking" class="home-parking" aria-labelledby="parking-title">
+  <div class="w">
+    <div>
+      <p class="home-intro-origin">MONTHLY PARKING</p>
+      <h2 id="parking-title">月極駐車場のご案内</h2>
+      <p>刈谷市で月極駐車場をお探しの方へ。ご希望のエリア・台数・利用開始日をお知らせいただければ、空き状況や契約手続きをご案内します。</p>
+    </div>
+    <div class="home-parking-links">
+      <a class="home-intro-primary" href="https://lin.ee/W2HbWIG">空き状況をLINEで聞く</a>
+      <a class="home-intro-link" href="tel:0566231758">電話で問い合わせる</a>
+      <a class="home-intro-link" href="#manage">駐車場の管理を相談する</a>
+    </div>
   </div>
 </section>
 
