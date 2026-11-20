@@ -254,11 +254,28 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
 #about.home-story{display:grid;grid-template-columns:minmax(0,46fr) minmax(0,54fr);padding:0;background:#e8ebe1;color:#233d32}
 .home-story-photo{position:relative;display:grid;grid-template-rows:minmax(0,1fr) auto;margin:0;min-width:0}
 .home-story-photo img{display:block;width:100%;height:100%;min-height:0;object-fit:cover;object-position:center 52%}
-.home-story-photo figcaption{padding:14px clamp(22px,5vw,90px);font-size:13px;color:#435b4f}
+.home-story-photo figcaption{display:flex;flex-wrap:wrap;gap:6px;padding:14px clamp(22px,5vw,90px);font-size:13px;font-weight:700;letter-spacing:.09em;color:#435b4f}
+.home-story-photo figcaption [aria-hidden]{color:#8c7957}
+.home-story-seal{position:absolute;right:0;bottom:14px;z-index:1;transform:translateX(50%);display:grid;place-content:center;justify-items:center;gap:7px;width:clamp(122px,10vw,200px);aspect-ratio:1;border-radius:50%;background:#f8f7ee;color:#52674f;text-align:center;box-shadow:0 1px 2px #233d321a}
+.home-story-seal>span{font-size:clamp(9px,.64vw,12px);font-weight:700;letter-spacing:.09em}
+.home-story-seal strong{font-size:clamp(28px,2.8vw,56px);line-height:1.1;letter-spacing:-.045em}
+.home-story-seal strong span{color:#9b8255;margin-left:.12em}
 .home-story-copy{align-self:center;padding:clamp(44px,6vw,115px) clamp(28px,6vw,120px)}
 .home-story-copy h2{margin:0 0 26px;font-size:clamp(32px,3.4vw,68px);line-height:1.45;letter-spacing:.065em}
 .home-story-copy p:not(.home-intro-origin){margin:0 0 18px}
 .home-story-lead{font:500 clamp(18px,1.35vw,26px)/1.9 "Shippori Mincho","Yu Mincho",serif}
+#consult{background:#f8f7f0;color:#233d32}
+#consult .sub{color:#465c50}
+.consult-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;padding:1px;background:#d8ddd0}
+.consult-card{display:block;padding:clamp(20px,3vw,42px);background:#fbfaf5;transition:background .2s}
+.consult-card:hover,.consult-card:focus-visible{background:#e8ebe1}
+.consult-card:focus-visible{outline:2px solid #2d4d41;outline-offset:-3px}
+.consult-card h3{font-size:clamp(19px,1.65vw,26px);line-height:1.5;margin:0 0 12px}
+.consult-card p{color:#465c50;font-size:15px;line-height:1.85;margin:0}
+.consult-card:last-child{grid-column:1/-1}
+#v-home #faq{background:color-mix(in srgb,var(--bg) 80%,var(--sf))}
+@media(max-width:850px){.consult-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:540px){.consult-grid{grid-template-columns:1fr}}
 #parking.home-parking{padding:clamp(42px,6vw,92px) 0;background:#2d4d41;color:#fff}
 .home-parking .w{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);align-items:center;gap:32px clamp(30px,7vw,96px)}
 .home-parking .home-intro-origin{margin-bottom:18px;color:#ded6b8}
@@ -272,6 +289,7 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
   .home-parking .w{grid-template-columns:1fr}
   #about.home-story{grid-template-columns:1fr}
   .home-story-photo img{height:auto;aspect-ratio:5/4}
+  .home-story-seal{right:14px;bottom:42px;transform:none}
   .home-story-copy{padding:28px clamp(22px,5.5vw,42px) 42px}
   #hero{grid-template-columns:1fr;min-height:0}
   .home-intro{padding:36px clamp(22px,5.5vw,42px) 22px}
@@ -323,21 +341,26 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
 </div></div>
 
 <section id="consult"><div class="w">
-<div class="sec-h rv"><span class="eye">CONSULTATION</span><h2>いまのお悩みから、<br>お選びください。</h2><p class="sub">何から始めればいいか分からない。そんな段階のご相談がほとんどです。</p></div>
-<div class="rows" data-st>
-<a class="row rv" href="#sell"><span class="n">01</span><div><h3>不動産を売りたい</h3><p>査定・売却相談は無料です。土地・戸建て・マンションの売却、相続や住み替えなど、ご事情に合わせた進め方をご提案します。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#buy"><span class="n">02</span><div><h3>家・土地を探したい</h3><p>刈谷市周辺の土地・戸建て・マンション探しをお手伝いします。希望エリアや予算、学校区、住宅ローンも含めてご相談ください。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#manage"><span class="n">03</span><div><h3>管理を任せたい</h3><p>賃貸物件や月極駐車場の管理について、賃料管理・入居者対応・空室や空き区画の募集などをご相談いただけます。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#vacant"><span class="n">04</span><div><h3>空き家で困っている</h3><p>相続した実家や古家付き土地について、売却・賃貸・管理・解体などの選択肢を一緒に整理します。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#buyout"><span class="n">05</span><div><h3>買取を相談したい</h3><p>当社が買主となる直接買取について、仲介で売る方法との違いや条件をご説明します。まずは価格の目安だけ知りたい方もご相談ください。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#contact"><span class="n">06</span><div><h3>賃貸物件を探したい</h3><p>希望エリアや家賃、入居時期を伺いながら、賃貸物件探しから契約までご案内します。</p></div><span class="ar"></span></a>
-<a class="row rv" href="#contact"><span class="n">07</span><div><h3>まだ決まっていない</h3><p>売る・貸す・持ち続ける。それぞれの選択肢と確認事項を整理するところからお手伝いします。</p></div><span class="ar"></span></a>
+<div class="sec-h rv"><span class="eye">OUR SERVICES</span><h2>いまのお悩みから、<br>お選びください。</h2><p class="sub">何から始めればいいか分からない。そんな段階のご相談がほとんどです。</p></div>
+<div class="consult-grid">
+<a class="consult-card" href="#sell"><h3>不動産を売りたい</h3><p>査定・売却相談は無料です。土地・戸建て・マンションの売却、相続や住み替えなど、ご事情に合わせた進め方をご提案します。</p></a>
+<a class="consult-card" href="#buy"><h3>家・土地を探したい</h3><p>刈谷市周辺の土地・戸建て・マンション探しをお手伝いします。希望エリアや予算、学校区、住宅ローンも含めてご相談ください。</p></a>
+<a class="consult-card" href="#manage"><h3>管理を任せたい</h3><p>賃貸物件や月極駐車場の管理について、賃料管理・入居者対応・空室や空き区画の募集などをご相談いただけます。</p></a>
+<a class="consult-card" href="#vacant"><h3>空き家で困っている</h3><p>相続した実家や古家付き土地について、売却・賃貸・管理・解体などの選択肢を一緒に整理します。</p></a>
+<a class="consult-card" href="#buyout"><h3>買取を相談したい</h3><p>当社が買主となる直接買取について、仲介で売る方法との違いや条件をご説明します。まずは価格の目安だけ知りたい方もご相談ください。</p></a>
+<a class="consult-card" href="#contact"><h3>賃貸物件を探したい</h3><p>希望エリアや家賃、入居時期を伺いながら、賃貸物件探しから契約までご案内します。</p></a>
+<a class="consult-card" href="#contact"><h3>まだ決まっていない</h3><p>売る・貸す・持ち続ける。それぞれの選択肢と確認事項を整理するところからお手伝いします。</p></a>
 </div></div></section>
 
 <section id="about" class="home-story">
   <figure class="home-story-photo">
     <img src="store-interior.jpeg" alt="ユタカ不動産の店内にあるご相談スペース" width="1152" height="1536" loading="lazy">
-    <figcaption>ご相談スペース</figcaption>
+    <figcaption><span lang="en">OUR CONSULTATION SPACE</span><span aria-hidden="true">／</span>ご相談スペース</figcaption>
+    <div class="home-story-seal" aria-label="刈谷で昭和51年創業">
+      <span lang="en">ROOTED IN KARIYA</span>
+      <strong>1976<span aria-hidden="true">—</span></strong>
+      <span lang="en">TO THE FUTURE</span>
+    </div>
   </figure>
   <div class="home-story-copy">
     <p class="home-intro-origin">OUR STORY</p>
