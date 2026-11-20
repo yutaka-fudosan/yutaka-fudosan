@@ -267,11 +267,12 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
 #consult{background:#f8f7f0;color:#233d32}
 #consult .sub{color:#465c50}
 .consult-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;padding:1px;background:#d8ddd0}
-.consult-card{display:block;padding:clamp(20px,3vw,42px);background:#fbfaf5;transition:background .2s}
+.consult-card{display:flex;flex-direction:column;align-items:flex-start;padding:clamp(20px,3vw,42px);background:#fbfaf5;transition:background .2s}
 .consult-card:hover,.consult-card:focus-visible{background:#e8ebe1}
 .consult-card:focus-visible{outline:2px solid #2d4d41;outline-offset:-3px}
 .consult-card h3{font-size:clamp(19px,1.65vw,26px);line-height:1.5;margin:0 0 12px}
 .consult-card p{color:#465c50;font-size:15px;line-height:1.85;margin:0}
+.consult-card-action{display:inline-block;margin-top:auto;padding-top:16px;color:#2d4d41;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:5px}
 .consult-card:last-child{grid-column:1/-1}
 #v-home #faq{background:color-mix(in srgb,var(--bg) 80%,var(--sf))}
 @media(max-width:850px){.consult-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
@@ -360,13 +361,13 @@ body:has(#v-home.on):not(.sc)::before{background:#f0efe6}
 <section id="consult"><div class="w">
 <div class="sec-h rv"><span class="eye">OUR SERVICES</span><h2>いまのお悩みから、<br>お選びください。</h2><p class="sub">何から始めればいいか分からない。そんな段階のご相談がほとんどです。</p></div>
 <div class="consult-grid">
-<a class="consult-card" href="#sell"><h3>不動産を売りたい</h3><p>査定・売却相談は無料です。土地・戸建て・マンションの売却、相続や住み替えなど、ご事情に合わせた進め方をご提案します。</p></a>
-<a class="consult-card" href="#buy"><h3>家・土地を探したい</h3><p>刈谷市周辺の土地・戸建て・マンション探しをお手伝いします。希望エリアや予算、学校区、住宅ローンも含めてご相談ください。</p></a>
-<a class="consult-card" href="#manage"><h3>管理を任せたい</h3><p>賃貸物件や月極駐車場の管理について、賃料管理・入居者対応・空室や空き区画の募集などをご相談いただけます。</p></a>
-<a class="consult-card" href="#vacant"><h3>空き家で困っている</h3><p>相続した実家や古家付き土地について、売却・賃貸・管理・解体などの選択肢を一緒に整理します。</p></a>
-<a class="consult-card" href="#buyout"><h3>買取を相談したい</h3><p>当社が買主となる直接買取について、仲介で売る方法との違いや条件をご説明します。まずは価格の目安だけ知りたい方もご相談ください。</p></a>
-<a class="consult-card" href="#contact"><h3>賃貸物件を探したい</h3><p>希望エリアや家賃、入居時期を伺いながら、賃貸物件探しから契約までご案内します。</p></a>
-<a class="consult-card" href="#contact"><h3>まだ決まっていない</h3><p>売る・貸す・持ち続ける。それぞれの選択肢と確認事項を整理するところからお手伝いします。</p></a>
+<a class="consult-card" href="#sell"><h3>不動産を売りたい</h3><p>査定・売却相談は無料です。土地・戸建て・マンションの売却、相続や住み替えなど、ご事情に合わせた進め方をご提案します。</p><span class="consult-card-action">売却のご案内を見る</span></a>
+<a class="consult-card" href="#buy"><h3>家・土地を探したい</h3><p>刈谷市周辺の土地・戸建て・マンション探しをお手伝いします。希望エリアや予算、学校区、住宅ローンも含めてご相談ください。</p><span class="consult-card-action">購入のご案内を見る</span></a>
+<a class="consult-card" href="#manage"><h3>管理を任せたい</h3><p>賃貸物件や月極駐車場の管理について、賃料管理・入居者対応・空室や空き区画の募集などをご相談いただけます。</p><span class="consult-card-action">管理のご案内を見る</span></a>
+<a class="consult-card" href="#vacant"><h3>空き家で困っている</h3><p>相続した実家や古家付き土地について、売却・賃貸・管理・解体などの選択肢を一緒に整理します。</p><span class="consult-card-action">空き家相談の詳細を見る</span></a>
+<a class="consult-card" href="#buyout"><h3>買取を相談したい</h3><p>当社が買主となる直接買取について、仲介で売る方法との違いや条件をご説明します。まずは価格の目安だけ知りたい方もご相談ください。</p><span class="consult-card-action">買取のご案内を見る</span></a>
+<a class="consult-card" href="#contact"><h3>賃貸物件を探したい</h3><p>希望エリアや家賃、入居時期を伺いながら、賃貸物件探しから契約までご案内します。</p><span class="consult-card-action">賃貸について問い合わせる</span></a>
+<a class="consult-card" href="#contact"><h3>まだ決まっていない</h3><p>売る・貸す・持ち続ける。それぞれの選択肢と確認事項を整理するところからお手伝いします。</p><span class="consult-card-action">お問い合わせへ</span></a>
 </div></div></section>
 
 <section id="about" class="home-story">
