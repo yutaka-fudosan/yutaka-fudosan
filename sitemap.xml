@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://yutaka-fudosan.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
+  <url><loc>https://yutaka-fudosan.com/</loc></url>
+  <url><loc>https://yutaka-fudosan.com/sell.html</loc></url>
+  <url><loc>https://yutaka-fudosan.com/buy.html</loc></url>
+  <url><loc>https://yutaka-fudosan.com/property-management.html</loc></url>
+  <url><loc>https://yutaka-fudosan.com/vacant-home.html</loc></url>
+  <url><loc>https://yutaka-fudosan.com/buyout.html</loc></url>
+  <url><loc>https://yutaka-fudosan.com/shop.html</loc></url>
 </urlset>
